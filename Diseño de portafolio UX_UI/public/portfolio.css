@@ -244,8 +244,8 @@ button { font-family: inherit; }
 
 .hero__bio {
   font-family: var(--sans); color: var(--lavender-hi);
-  font-size: clamp(.95rem, 2.5vw, 1.1rem); line-height: 1.65; font-weight: 300;
-  max-width: 500px;
+  font-size: clamp(.95rem, 2.5vw, 1.1rem); line-height: 1.65; font-weight: 400;
+  
 }
 .hero__bio strong { font-weight: 600; color: #fff; }
 

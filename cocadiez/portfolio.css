@@ -16,8 +16,7 @@ button { font-family: inherit; }
   --lavender-lo: #D8C4F4;  /* 6.8:1 on purple */
   --light-bg:    #F8F7FC;
   --dark-text:   #1A0A2E;
-  --body-text:   #2C1F42; 
-  --acento:      #F25822;
+  --body-text:   #2C1F42;
   --serif:       'Zilla Slab', serif;
   --sans:        'Ubuntu Sans', sans-serif;
   --mono:        'Ubuntu Sans Mono', monospace;
@@ -88,7 +87,7 @@ button { font-family: inherit; }
   text-decoration: none;
 }
 .btn:active { transform: scale(.96); }
-.btn--solid   { background: var(--acento); color: #fff; }
+.btn--solid   { background: var(--purple); color: #fff; }
 .btn--white   { background: #fff; color: var(--purple); font-weight: 700; }
 .btn--outline { background: transparent; color: var(--lavender-hi); border: 1.5px solid rgba(237,226,255,.4); }
 .btn--full    { width: 100%; }
@@ -182,7 +181,7 @@ button { font-family: inherit; }
 
 /* ── HERO ──────────────────────────────────────────────────────────────────── */
 .hero {
-  position: relative; 
+  position: relative; min-height: 100svh;
   background: var(--purple);
   display: flex; flex-direction: column; justify-content: flex-end;
   padding-top: 6rem; padding-bottom: 3.5rem;

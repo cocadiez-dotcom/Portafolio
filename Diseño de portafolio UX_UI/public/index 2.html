@@ -15,31 +15,31 @@
 
   <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-  <!-- NAV -->
-  <header class="custom-nav" id="nav" role="banner">
-    <nav class="custom-nav__inner" aria-label="Navegación principal">
-      <a href="#" class="custom-nav__logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Volver al inicio">Coca Diez</a>
-      <ul class="custom-nav__links" role="list">
-        <li><a href="#about" class="custom-nav__link" onclick="navSmooth(event,'#about')">Sobre mí</a></li>
-        <li><a href="#projects" class="custom-nav__link" onclick="navSmooth(event,'#projects')">Proyectos</a></li>
-        <li><a href="#skills" class="custom-nav__link" onclick="navSmooth(event,'#skills')">Habilidades</a></li>
-        <li><a href="#contact" class="custom-nav__link" onclick="navSmooth(event,'#contact')">Contacto</a></li>
-      </ul>
-      <a href="#contact" class="btn btn--solid custom-nav__cta" onclick="navSmooth(event,'#contact')">Trabajemos juntos</a>
-      <button class="custom-nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-    <div class="custom-nav__mobile" id="mobile-menu" aria-hidden="true">
-      <ul role="list">
-        <li><a href="#about" onclick="mobileNav(event,'#about')">Sobre mí</a></li>
-        <li><a href="#projects" onclick="mobileNav(event,'#projects')">Proyectos</a></li>
-        <li><a href="#skills" onclick="mobileNav(event,'#skills')">Habilidades</a></li>
-        <li><a href="#contact" onclick="mobileNav(event,'#contact')">Contacto</a></li>
-      </ul>
-      <button class="btn btn--solid" onclick="mobileNav(event,'#contact')">Trabajemos juntos</button>
-    </div>
-  </header>
+<!-- NAV -->
+<header class="nav" id="nav" role="banner">
+  <nav class="nav__inner" aria-label="Navegación principal">
+    <a href="#" class="nav__logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Volver al inicio">Coca Diez</a>
+    <ul class="nav__links" role="list">
+      <li><a href="#about" class="nav__link" onclick="navSmooth(event,'#about')">Sobre mí</a></li>
+      <li><a href="#projects" class="nav__link" onclick="navSmooth(event,'#projects')">Proyectos</a></li>
+      <li><a href="#skills" class="nav__link" onclick="navSmooth(event,'#skills')">Habilidades</a></li>
+      <li><a href="#contact" class="nav__link" onclick="navSmooth(event,'#contact')">Contacto</a></li>
+    </ul>
+    <a href="#contact" class="btn btn--solid nav__cta" onclick="navSmooth(event,'#contact')">Trabajemos juntos</a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav__mobile" id="mobile-menu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#about" onclick="mobileNav(event,'#about')">Sobre mí</a></li>
+      <li><a href="#projects" onclick="mobileNav(event,'#projects')">Proyectos</a></li>
+      <li><a href="#skills" onclick="mobileNav(event,'#skills')">Habilidades</a></li>
+      <li><a href="#contact" onclick="mobileNav(event,'#contact')">Contacto</a></li>
+    </ul>
+    <button class="btn btn--solid" onclick="mobileNav(event,'#contact')">Trabajemos juntos</button>
+  </div>
+</header>
 
   <main id="main-content">
 
@@ -127,7 +127,7 @@ Cliente empoderado para gestionar contenido digital sin depender del equipo téc
 <strong>Lecciones Aprendidas y Reflexión</strong>
 <br><br>
 Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la colaboración continua con el cliente, y el diseño centrado en el usuario para construir productos digitales sostenibles y exitosos a largo plazo.</p>
-                <ul class="methods" role="list" aria-label="Metodologías aplicadas"><li class="method">Heurística</li><li class="method">Wireframes</li><li class="method">Prototipo Hi-Fi</li></ul>
+                <ul class="methods" role="list" aria-label="Metodologías aplicadas"><li class="method">Heurídccstica</li><li class="method">vgl, Wireframes</li><li class="method">Proxvvvtotipo Hi-Fi</li></ul>
               </div>
             </div></div>
           </article>
@@ -135,7 +135,7 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
           <article class="project" role="button" tabindex="0" aria-expanded="false" aria-label="Auloria — EdTech. Expandir detalles" onclick="toggleProject(this)" onkeydown="projectKey(event,this)">
             <div class="project__header">
               <div class="project__meta">
-                <span class="project__num" aria-hidden="true">02</span>
+                <span class="project__num" aria-hidden="true">01</span>
                 <div><p class="project__tag">EdTech</p><h3 class="project__title">Auloria</h3></div>
               </div>
               <div class="project__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
@@ -152,7 +152,7 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
           <article class="project" role="button" tabindex="0" aria-expanded="false" aria-label="Aula Digital — IA · Arquitectura. Expandir detalles" onclick="toggleProject(this)" onkeydown="projectKey(event,this)">
             <div class="project__header">
               <div class="project__meta">
-                <span class="project__num" aria-hidden="true">03</span>
+                <span class="project__num" aria-hidden="true">02</span>
                 <div><p class="project__tag">IA · Arquitectura</p><h3 class="project__title">Aula Digital</h3></div>
               </div>
               <div class="project__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
@@ -169,7 +169,7 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
           <article class="project" role="button" tabindex="0" aria-expanded="false" aria-label="Aula Digital Research — UX Research · Accesibilidad. Expandir detalles" onclick="toggleProject(this)" onkeydown="projectKey(event,this)">
             <div class="project__header">
               <div class="project__meta">
-                <span class="project__num" aria-hidden="true">04</span>
+                <span class="project__num" aria-hidden="true">03</span>
                 <div><p class="project__tag">UX Research · Accesibilidad</p><h3 class="project__title">Aula Digital Research</h3></div>
               </div>
               <div class="project__toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
@@ -219,31 +219,37 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
         <div class="contact__grid">
         
           <form id="contactForm" action="https://formsubmit.co/cocadiez@gmail.com" method="POST">
-            <div class="etiqueta">Nombre *</div>
-            <div class="mb-3">
-              <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Tu nombre" required>
-              <div class="invalid-feedback">Ingresa tu nombre.</div>
-            </div>
+            <!-- Nombre -->
+<div class="etiqueta">Nombre *</div>
+<div class="mb-3">
+    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Tu nombre" required>
+    <div class="invalid-feedback">Ingresa tu nombre.</div>
+</div>
 
-            <div class="etiqueta">Email *</div>
-            <div class="mb-3">
-              <input type="email" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-              <div class="invalid-feedback">Ingresa un email válido.</div>
-            </div>
+<!-- Email -->
+<div class="etiqueta">Email *</div>
+<div class="mb-3">
+    <input type="email" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+    <div class="invalid-feedback">Ingresa un email válido.</div>
+</div>
 
-            <div class="etiqueta">Mensaje *</div>
-            <div class="mb-3">
-              <textarea name="mensaje" class="form-control" placeholder="Escribe tu mensaje aquí..." id="mensaje" style="height: 120px" required></textarea>
-              <div class="invalid-feedback">Escribe un mensaje.</div>
-            </div>
+<!-- Mensaje -->
+<div class="etiqueta">Mensaje *</div>
+<div class="mb-3">
+    <textarea name="mensaje" class="form-control" placeholder="Escribe tu mensaje aquí..." id="mensaje" style="height: 120px" required></textarea>
+    <div class="invalid-feedback">Escribe un mensaje.</div>
+</div>
 
+            <!-- Config -->
             <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
             <input type="hidden" name="_captcha" value="false">
 
+            <!-- Botón -->
             <button type="submit" class="btn btn--solid btn--full contact-submit-btn">
               Enviar Mensaje
             </button>
 
+            <!-- Feedback -->
             <div id="formAlert" class="alert d-none mt-3"></div>
           </form>
 
@@ -275,12 +281,9 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
 
   <script>
     const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('custom-nav--scrolled', window.scrollY > 40), { passive: true });
+    window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 40), { passive: true });
 
-    function navSmooth(e, href) { 
-      e.preventDefault(); 
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-    }
+    function navSmooth(e, href) { e.preventDefault(); document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -289,8 +292,8 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
       hamburger.setAttribute('aria-expanded', String(!open));
       hamburger.setAttribute('aria-label', open ? 'Abrir menú' : 'Cerrar menú');
       mobileMenu.setAttribute('aria-hidden', String(open));
-      mobileMenu.classList.toggle('custom-nav__mobile--open', !open);
-      hamburger.classList.toggle('custom-nav__hamburger--open', !open);
+      mobileMenu.classList.toggle('nav__mobile--open', !open);
+      hamburger.classList.toggle('nav__hamburger--open', !open);
     });
 
     function mobileNav(e, href) {
@@ -298,8 +301,8 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'Abrir menú');
       mobileMenu.setAttribute('aria-hidden', 'true');
-      mobileMenu.classList.remove('custom-nav__mobile--open');
-      hamburger.classList.remove('custom-nav__hamburger--open');
+      mobileMenu.classList.remove('nav__mobile--open');
+      hamburger.classList.remove('nav__hamburger--open');
       document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
@@ -308,12 +311,7 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
       el.setAttribute('aria-expanded', String(!isOpen));
       el.classList.toggle('project--open', !isOpen);
     }
-    function projectKey(e, el) { 
-      if (e.key === 'Enter' || e.key === ' ') { 
-        e.preventDefault(); 
-        toggleProject(el); 
-      } 
-    }
+    function projectKey(e, el) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleProject(el); } }
 
     const io = new IntersectionObserver((entries) => {
       entries.forEach(en => {
@@ -327,11 +325,7 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
 
     const dot = document.querySelector('.hero__scroll-dot');
     let t = 0;
-    (function tick() { 
-      t += 0.02; 
-      if (dot) dot.style.transform = `translateY(${Math.sin(t) * 6}px)`; 
-      requestAnimationFrame(tick); 
-    })();
+    (function tick() { t += 0.02; if (dot) dot.style.transform = `translateY(${Math.sin(t) * 6}px)`; requestAnimationFrame(tick); })();
 
     // ========== FORMULARIO DE CONTACTO ==========
     document.addEventListener("DOMContentLoaded", function () {
@@ -344,6 +338,7 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
             return;
         }
 
+        // Validación en tiempo real
         const inputs = form.querySelectorAll('.form-control');
         inputs.forEach(input => {
             input.addEventListener('blur', function() {
@@ -372,10 +367,12 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
 
             let isValid = true;
 
+            // Limpiar estados anteriores
             [nombre, email, mensaje].forEach(el => {
                 el.classList.remove('is-valid', 'is-invalid');
             });
 
+            // Validaciones
             if (!nombre.value.trim()) {
                 nombre.classList.add('is-invalid');
                 isValid = false;
@@ -404,6 +401,7 @@ Esta experiencia me enseñó la importancia de la adaptabilidad tecnológica, la
                 return;
             }
 
+            // Enviar
             button.innerText = "Enviando...";
             button.disabled = true;
             alertBox.classList.add('d-none');

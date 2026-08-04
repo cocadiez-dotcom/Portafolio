@@ -12,9 +12,9 @@ button { font-family: inherit; }
   --purple:      #402563;
   --purple-deep: #2D1657;
   --purple-light: #625EBF;
-  --lavender-hi: #EDE2FF;  /* 9.4:1 on purple */
-  --lavender-md: #C8B2E8;  /* 5.2:1 on purple */
-  --lavender-lo: #D8C4F4;  /* 6.8:1 on purple */
+  --lavender-hi: #EDE2FF;
+  --lavender-md: #C8B2E8;
+  --lavender-lo: #D8C4F4;
   --light-bg:    #F8F7FC;
   --dark-text:   #1A0A2E;
   --body-text:   #2C1F42; 
@@ -72,14 +72,6 @@ button { font-family: inherit; }
 .body-text--light { color: var(--lavender-hi); }
 .body-text--muted { color: var(--lavender-md); font-size: .88rem; line-height: 1.78; }
 
-.link-arrow {
-  display: inline-flex; align-items: center; gap: .5rem;
-  color: var(--purple); font-family: var(--sans); font-size: .9rem; font-weight: 600;
-  transition: opacity .2s;
-}
-.link-arrow:hover { opacity: .7; }
-.link-arrow:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 3px; }
-
 /* ── Buttons ───────────────────────────────────────────────────────────────── */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
@@ -95,14 +87,6 @@ button { font-family: inherit; }
 .btn--full    { width: 100%; }
 .btn:hover { opacity: .9; }
 .btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-
-/* ── Tags ──────────────────────────────────────────────────────────────────── */
-.tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
-.tag {
-  font-family: var(--sans); font-size: .78rem; font-weight: 600;
-  background: #EDE2FF; color: var(--purple);   /* 12:1 */
-  padding: 4px 13px; border-radius: 999px;
-}
 
 /* ── Container & sections ──────────────────────────────────────────────────── */
 .container { max-width: var(--max-w); margin-inline: auto; padding-inline: var(--px); }
@@ -249,9 +233,6 @@ button { font-family: inherit; }
 }
 .hero__bio strong { font-weight: 600; color: #fff; }
 
-.hero__ctas { display: flex; flex-direction: row; gap: .75rem; flex-wrap: wrap; }
-@media (min-width: 640px) { .hero__ctas { flex-direction: column; align-items: flex-end; } }
-
 .hero__stats {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
   padding-top: 1.75rem;
@@ -358,7 +339,7 @@ button { font-family: inherit; }
   display: flex; flex-direction: column; gap: 1rem;
 }
 .skill-card__label {
-  font-family: var(--mono); color: var(--purple);   /* 12:1 on white */
+  font-family: var(--mono); color: var(--purple);
   font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
 }
 .skill-card ul { display: flex; flex-direction: column; gap: .6rem; }
@@ -399,39 +380,6 @@ button { font-family: inherit; }
 
 .contact__grid { display: grid; gap: 2.5rem; }
 @media (min-width: 768px) { .contact__grid { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; } }
-
-/* Form */
-.contact__form { display: flex; flex-direction: column; gap: 1rem; }
-
-.field { display: flex; flex-direction: column; gap: .4rem; }
-.field label {
-  font-family: var(--sans); color: var(--lavender-lo); font-size: .8rem;
-}
-.field input,
-.field textarea {
-  font-family: var(--sans); font-size: .95rem; color: #fff;
-  background: rgba(255,255,255,.08);
-  border: 1.5px solid rgba(237,226,255,.22);
-  border-radius: var(--radius-sm);
-  padding: .8rem 1rem;
-  transition: border-color .2s;
-  width: 100%; resize: none;
-  outline: none;
-}
-.field input::placeholder,
-.field textarea::placeholder { color: rgba(237,226,255,.35); }
-.field input:focus,
-.field textarea:focus { border-color: var(--lavender-hi); }
-.field input:focus-visible,
-.field textarea:focus-visible { outline: 2px solid var(--lavender-hi); outline-offset: 2px; }
-
-.form__error { font-family: var(--sans); color: #FCA5A5; font-size: .85rem; min-height: 1.25rem; }
-.form__success {
-  padding: .875rem 1rem; border-radius: var(--radius-sm); text-align: center;
-  background: rgba(255,255,255,.1); border: 1px solid rgba(237,226,255,.3);
-  font-family: var(--sans); color: var(--lavender-hi); font-size: .95rem;
-}
-.form__success[hidden] { display: none; }
 
 /* Sidebar */
 .contact__sidebar { display: flex; flex-direction: column; gap: 1.75rem; }
@@ -478,39 +426,17 @@ button { font-family: inherit; }
 @media (min-width: 640px) {
   .footer__inner { flex-direction: row; justify-content: space-between; text-align: left; }
 }
-.footer p      { font-family: var(--sans);  color: var(--lavender-md); font-size: .8rem; }
-.footer__mono  { font-family: var(--mono);  color: #9B85C0;            font-size: .7rem; letter-spacing: .06em; }
+.footer p { font-family: var(--sans); color: var(--lavender-md); font-size: .8rem; }
 
-/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(64,37,99,.3); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(64,37,99,.5); }
-
-/* ── Focus ring global ─────────────────────────────────────────────────────── */
-:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
-
-/* ── Reduced motion ────────────────────────────────────────────────────────── */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-  .fade-in { opacity: 1; transform: none; }
-}
-
-
-  .etiqueta {           
-  color: var(--lavender-hi);
-
-}
 /* ── Estilos específicos para el formulario #contactForm ── */
 #contactForm .form-control {
     background: var(--purple-deep) !important;
-    border: 1.5px solid rgba(237,226,255,.22) !important;
+    border: 1.5px solid rgba(237, 226, 255, 0.22) !important;
     color: var(--lavender-hi) !important;
 }
 
 #contactForm .form-control::placeholder {
-    color: rgba(237,226,255,.22) !important;
-    opacity: 0.7;
+    color: rgba(237, 226, 255, 0.4) !important;
 }
 
 #contactForm .form-control:focus {
@@ -529,7 +455,7 @@ button { font-family: inherit; }
 }
 
 #contactForm .form-floating > label {
-    color: var(--purple-light);
+    color: rgba(237, 226, 255, 0.5);
 }
 
 #contactForm .form-floating > .form-control:focus ~ label,
@@ -558,3 +484,20 @@ button { font-family: inherit; }
 #contactForm .contact-submit-btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(64,37,99,.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(64,37,99,.5); }
+
+/* ── Focus ring global ─────────────────────────────────────────────────────── */
+:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+
+/* ── Reduced motion ────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .fade-in { opacity: 1; transform: none; }
+}

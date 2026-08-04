@@ -227,7 +227,7 @@ button { font-family: inherit; }
 }
 .hero__title-italic {
   display: block;
-  font-size: clamp(2.8rem, 12vw, 8.5rem);
+  font-size: clamp(2.8rem, 12vw, 5.5rem);
   font-weight: 400; font-style: italic;
   color: var(--lavender-md);
   line-height: 1.05;
@@ -244,8 +244,7 @@ button { font-family: inherit; }
 
 .hero__bio {
   font-family: var(--sans); color: var(--lavender-hi);
-  font-size: clamp(.95rem, 2.5vw, 1.1rem); line-height: 1.65; font-weight: 400; max-width: 500;
-  
+  font-size: clamp(.95rem, 2.5vw, 1.1rem); line-height: 1.65; font-weight: 400; max-width: 600;  
 }
 .hero__bio strong { font-weight: 600; color: #fff; }
 

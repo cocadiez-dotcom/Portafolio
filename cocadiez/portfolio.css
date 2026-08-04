@@ -11,6 +11,7 @@ button { font-family: inherit; }
 :root {
   --purple:      #402563;
   --purple-deep: #2D1657;
+  --purple-light: #625EBF;
   --lavender-hi: #EDE2FF;  /* 9.4:1 on purple */
   --lavender-md: #C8B2E8;  /* 5.2:1 on purple */
   --lavender-lo: #D8C4F4;  /* 6.8:1 on purple */
@@ -60,9 +61,9 @@ button { font-family: inherit; }
   font-size: clamp(1.9rem, 5vw, 3.2rem);
   line-height: 1.15;
   letter-spacing: -.02em;
-  color: var(--dark-text);
+  color: var(--purple-light);
 }
-.heading em { font-style: italic; color: var(--purple); }
+.heading em { font-style: italic; color: var(--acento); }
 .heading--light { color: #fff; }
 .heading--light em { color: var(--lavender-md); }
 
@@ -494,3 +495,66 @@ button { font-family: inherit; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .fade-in { opacity: 1; transform: none; }
 }
+
+
+  .etiqueta {           
+  color: var(--lavender-hi);
+
+}
+/* ── Estilos específicos para el formulario #contactForm ── */
+#contactForm .form-control {
+    background: var(--purple-deep) !important;
+    border: 1.5px solid rgba(237,226,255,.22) !important;
+    color: var(--lavender-hi) !important;
+}
+
+#contactForm .form-control::placeholder {
+    color: rgba(237,226,255,.22) !important;
+    opacity: 0.7;
+}
+
+#contactForm .form-control:focus {
+    background: var(--purple-deep) !important;
+    border-color: var(--lavender-hi) !important;
+    color: var(--lavender-hi) !important;
+    box-shadow: 0 0 0 0.25rem rgba(98, 94, 191, 0.25);
+    outline: none;
+}
+
+#contactForm .etiqueta {
+    color: var(--lavender-hi);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+#contactForm .form-floating > label {
+    color: var(--purple-light);
+}
+
+#contactForm .form-floating > .form-control:focus ~ label,
+#contactForm .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: var(--lavender-hi);
+}
+
+#contactForm .contact-submit-btn {
+    background: var(--light-bg) !important;
+    color: #2D1657 !important;
+    border: none !important;
+    transition: all 0.3s ease;
+}
+
+#contactForm .contact-submit-btn:hover {
+    background: var(--purple-deep) !important;
+    color: #ffffff !important;
+    opacity: 1;
+}
+
+#contactForm .contact-submit-btn:focus {
+    outline: 2px solid var(--purple-light);
+    outline-offset: 2px;
+}
+
+#contactForm .contact-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;

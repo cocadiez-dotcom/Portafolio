@@ -18,7 +18,7 @@ button { font-family: inherit; }
   --light-bg:    #F8F7FC;
   --dark-text:   #1A0A2E;
   --body-text:   #2C1F42; 
-  --acento:      #F25822;
+  --acento:      rgb(230, 83, 29);
   --serif:       'Zilla Slab', serif;
   --sans:        'Ubuntu Sans', sans-serif;
   --mono:        'Ubuntu Sans Mono', monospace;
@@ -303,7 +303,7 @@ button { font-family: inherit; }
 .project--open .project__body { grid-template-rows: 1fr; }
 .project__body-inner {
   overflow: hidden;
-  display: grid; gap: 1.5rem;
+  display:grid; gap: 1.5rem;
   padding: 0 1.25rem;
 }
 @media (min-width: 768px) { .project__body-inner { grid-template-columns: 1fr 1fr; padding: 0 1.75rem; } }
@@ -376,7 +376,7 @@ button { font-family: inherit; }
 .process__step p { font-family: var(--sans); color: var(--lavender-hi); font-size: .8rem; line-height: 1.55; margin-top: .15rem; }
 
 /* ── CONTACT ───────────────────────────────────────────────────────────────── */
-.contact__intro { font-family: var(--sans); color: var(--lavender-hi); font-size: 1rem; line-height: 1.65; }
+.contact__intro { font-family: var(--sans); color: var(--light-bg); font-size: 1rem; line-height: 1.65; }
 
 .contact__grid { display: grid; gap: 2.5rem; }
 @media (min-width: 768px) { .contact__grid { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; } }
@@ -500,4 +500,53 @@ button { font-family: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .fade-in { opacity: 1; transform: none; }
+}
+@keyframes floatGlow {
+  0%, 100% { 
+    transform: translateY(0px); 
+    text-shadow: 0 0 20px rgba(237, 226, 255, 0.1);
+  }
+  50% { 
+    transform: translateY(-12px); 
+    text-shadow: 0 0 0px rgba(230, 83, 29, 0.1), 0 0 80px rgba(248, 244, 242, 0.5);
+  }
+}
+
+.hero__title-main {
+  animation: floatGlow 4s ease-in-out infinite;
+  display: inline-block; 
+}
+/* ── Galería de imágenes en acordeón ── */
+.project__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.project__gallery-img {
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--purple-deep);
+  border: 1px solid rgba(237, 226, 255, 0.1);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.project__gallery-img:hover {
+  transform: scale(1.02);
+  border-color: rgba(237, 226, 255, 0.4);
+}
+
+@media (min-width: 768px) {
+  .project__gallery-img {
+    height: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project__gallery-img:hover {
+    transform: none !important;
+  }
 }

@@ -572,3 +572,18 @@ button { font-family: inherit; }
     gap: 1rem;
   }
 }
+.project__body-inner {
+  overflow: hidden;
+  display: grid;
+  gap: 1.5rem;
+  padding: 0 1.25rem;
+  align-items: start; /* 👈 evita que la galería se estire para igualar el texto */
+}
+.project__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+  align-items: start;
+  align-content: start; /* 👈 evita que las filas de fotos se repartan verticalmente */
+}

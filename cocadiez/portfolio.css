@@ -81,13 +81,13 @@ button { font-family: inherit; }
   text-decoration: none;
 }
 .btn:active { transform: scale(.96); }
-.btn--solid   { background: var(--acento); color: #fff; }
+.btn--solid   { background: var(--acento); color: #ffffff; }
 .btn--white   { background: #fff; color: var(--purple); font-weight: 700; }
-.btn--outline { background: transparent; color: var(--lavender-hi); border: 1.5px solid rgba(237,226,255,.4); }
+.btn--outline {  color: var(--lavender-hi); border: 1.5px solid rgba(237,226,255,.4); }
 .btn--full    { width: 100%; }
 .btn:hover { opacity: .9; }
 .btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-
+.btn--solid:hover {background: var(--acento); opacity: .7; color: #fff; }
 /* ── Container & sections ──────────────────────────────────────────────────── */
 .container { max-width: var(--max-w); margin-inline: auto; padding-inline: var(--px); }
 
@@ -577,7 +577,7 @@ button { font-family: inherit; }
   display: grid;
   gap: 1.5rem;
   padding: 0 1.25rem;
-  align-items: start; /* 👈 evita que la galería se estire para igualar el texto */
+  align-items: start; /* Que la galería no se estire para igualar el texto */
 }
 .project__gallery {
   display: grid;
@@ -585,5 +585,5 @@ button { font-family: inherit; }
   gap: 0.75rem;
   margin-top: 1rem;
   align-items: start;
-  align-content: start; /* 👈 evita que las filas de fotos se repartan verticalmente */
+  align-content: start; /* Que las filas de fotos no se repartan verticalmente */
 }

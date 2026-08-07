@@ -67,7 +67,7 @@ button { font-family: inherit; }
 .heading--light { color: #fff; }
 .heading--light em { color: var(--lavender-md); }
 
-.body-text { font-family: var(--sans); color: var(--body-text); line-height: 1.78; font-size: .98rem; }
+.body-text { font-family: var(--sans); color: var(--body-text); line-height: 1.6; font-size: .98rem; }
 .body-text + .body-text { margin-top: .75rem; }
 .body-text--light { color: var(--lavender-hi); }
 .body-text--muted { color: var(--lavender-md); font-size: .88rem; line-height: 1.78; }

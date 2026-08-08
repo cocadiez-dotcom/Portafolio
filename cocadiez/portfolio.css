@@ -14,11 +14,10 @@ button { font-family: inherit; }
   --purple-light: #625EBF;
   --lavender-hi: #EDE2FF;
   --lavender-md: #C8B2E8;
-  --lavender-lo: #D8C4F4;
   --light-bg:    #F8F7FC;
   --dark-text:   #1A0A2E;
   --body-text:   #2C1F42; 
-  --acento:      rgb(230, 83, 29);
+  --acento:      #E6531D;
   --serif:       'Zilla Slab', serif;
   --sans:        'Ubuntu Sans', sans-serif;
   --mono:        'Ubuntu Sans Mono', monospace;
@@ -54,7 +53,7 @@ button { font-family: inherit; }
   display: block;
 }
 .label--dark  { color: var(--purple); }
-.label--light { color: var(--lavender-lo); }
+.label--light { color: var(--lavender-md); }
 
 .heading {
   font-family: var(--serif);
@@ -287,7 +286,7 @@ button { font-family: inherit; }
 @media (min-width: 768px) { .project__meta { gap: 1.5rem; } }
 
 .project__num { font-family: var(--mono); color: var(--lavender-md); font-size: .72rem; flex-shrink: 0; }
-.project__tag { font-family: var(--mono); color: var(--lavender-lo); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3px; }
+.project__tag { font-family: var(--mono); color: var(--lavender-md); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3px; }
 .project__title { font-family: var(--serif); color: #fff; font-size: clamp(1.1rem, 3.5vw, 1.65rem); font-weight: 700; line-height: 1.1; }
 
 .project__toggle {

@@ -51,9 +51,10 @@ button { font-family: inherit; }
   text-transform: uppercase;
   margin-bottom: 1.25rem;
   display: block;
+  font-weight: 500;
 }
 .label--dark  { color: var(--purple); }
-.label--light { color: var(--lavender-md); }
+.label--light { color: #fff; }
 
 .heading {
   font-family: var(--serif);
@@ -82,7 +83,7 @@ button { font-family: inherit; }
 .btn:active { transform: scale(.96); }
 .btn--solid   { background: var(--acento); color: #ffffff; }
 .btn--white   { background: #fff; color: var(--purple); font-weight: 700; }
-.btn--outline {  color: var(--lavender-hi); border: 1.5px solid rgba(237,226,255,.4); }
+.btn--outline {  color: var(--lavender-hi); border: 1.5px solid rgba(237,226,255,.4); background: rgba(12, 226, 80, 0.08); }
 .btn--full    { width: 100%; }
 .btn:hover { opacity: .9; }
 .btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
@@ -119,7 +120,7 @@ button { font-family: inherit; }
 }
 .custom-nav--scrolled .custom-nav__logo { color: var(--purple); }
 
-.custom-nav__links { display: none; align-items: center; gap: 1.75rem; }
+.custom-nav__links { display: none; align-items: center; gap: 1.75rem; font-weight: 500; }
 @media (min-width: 768px) { .custom-nav__links { display: flex; } }
 .custom-nav__link {
   font-family: var(--sans); font-size: .875rem; color: var(--lavender-hi);
@@ -243,7 +244,7 @@ button { font-family: inherit; }
   font-size: clamp(1.5rem, 5vw, 2.8rem); font-weight: 700; line-height: 1;
 }
 .hero__stat-label {
-  font-family: var(--sans); color: var(--lavender-md);
+  font-family: var(--sans); color: var(--light-bg);
   font-size: .72rem; margin-top: 5px; letter-spacing: .04em;
 }
 

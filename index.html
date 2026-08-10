@@ -1025,15 +1025,17 @@
         button.disabled = true;
         alertBox.classList.add("d-none");
 
-        const data = new FormData(form);
+        // Solución: Convertir Form Data a Objeto JSON para FormSubmit
+        const formDataObject = Object.fromEntries(new FormData(form));
 
         try {
           const response = await fetch(form.action, {
             method: "POST",
-            body: data,
             headers: {
-              Accept: "application/json",
+              "Content-Type": "application/json",
+              "Accept": "application/json"
             },
+            body: JSON.stringify(formDataObject)
           });
 
           if (response.ok) {
@@ -1046,7 +1048,7 @@
               el.classList.remove("is-valid", "is-invalid");
             });
           } else {
-            throw new Error();
+            throw new Error("Respuesta de red no ok");
           }
         } catch (error) {
           alertBox.classList.remove("d-none", "alert-success");

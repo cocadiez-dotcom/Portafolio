@@ -70,7 +70,7 @@ button { font-family: inherit; }
 .body-text { font-family: var(--sans); color: var(--body-text); line-height: 1.6; font-size: .98rem; }
 .body-text + .body-text { margin-top: .75rem; }
 .body-text--light { color: var(--lavender-hi); }
-.body-text--muted { color: var(--lavender-md); font-size: .88rem; line-height: 1.78; }
+.body-text--muted { color: var(--lavender-hi); font-size: .88rem; line-height: 1.78; }
 
 /* ── Buttons ───────────────────────────────────────────────────────────────── */
 .btn {

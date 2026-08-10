@@ -326,7 +326,6 @@ button { font-family: inherit; }
 /* Espaciado específico para los subtítulos/encabezados dentro del texto */
 .project__details strong {
   display: block;
-  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   color: #ffffff; /* Ajusta a var(--dark-text) si estás en un contenedor claro */
   font-size: 1.05rem;

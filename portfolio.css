@@ -82,17 +82,10 @@ button { font-family: inherit; }
 }
 .btn:active { transform: scale(.96); }
 .btn--solid   { background: var(--acento); color: #ffffff; }
-.btn--white   { background: #fff; color: var(--purple); font-weight: 700; }
-.btn--outline {  color: var(--lavender-hi); border: 1.5px solid rgba(237,226,255,.4); background: rgba(12, 226, 80, 0.08); }
 .btn--full    { width: 100%; }
 .btn:hover { opacity: .9; }
 .btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 .btn--solid:hover {background: var(--acento); opacity: .7; color: #fff; }
-.btn--solid:active {
-  background-color: var(--purple-deep) !important;
-  opacity: 1;                           
-  color: var(--lavender-hi)!important;       
-}
 /* ── Container & sections ──────────────────────────────────────────────────── */
 .container { max-width: var(--max-w); margin-inline: auto; padding-inline: var(--px); }
 
@@ -101,6 +94,11 @@ button { font-family: inherit; }
 .section--light { background: var(--light-bg); }
 .section--dark  { background: var(--purple); }
 .section > .container { display: flex; flex-direction: column; gap: 2.5rem; }
+.btn--solid:active {
+  background-color: var(--purple-deep) !important;
+  opacity: 1;                           
+  color: var(--lavender-hi)!important;       
+}
 
 /* ── NAV ───────────────────────────────────────────────────────────────────── */
 .custom-nav {
@@ -558,7 +556,7 @@ button { font-family: inherit; }
   transition: border-color 0.2s, transform 0.2s;
   background: transparent;
   line-height: 0;
-  /* Importante: que el wrapper se ajuste al contenido */
+  /* Importante que el wrapper se ajuste al contenido */
   height: auto !important;
 }
 
@@ -611,204 +609,3 @@ button { font-family: inherit; }
   align-content: start; /* Que las filas de fotos no se repartan verticalmente */
 }
 
-/* ── Proyecto 7: Invertido, Tabs y Galería en 1 Fila ────────────────────── */
-
-.project--inverted {
-  background: #FFFFFF;
-  border: 1px solid rgba(64, 37, 99, 0.15);
-  box-shadow: 0 4px 20px rgba(26, 10, 46, 0.05);
-}
-.project--inverted:hover {
-  border-color: rgba(64, 37, 99, 0.3);
-}
-.project--inverted.project--open {
-  border-color: var(--purple-light);
-}
-
-.project--inverted .project__num,
-.project--inverted .project__tag {
-  color: var(--purple-light);
-}
-.project--inverted .project__title {
-  color: var(--dark-text);
-}
-.project--inverted .project__toggle {
-  background: rgba(64, 37, 99, 0.08);
-  color: var(--purple);
-}
-
-.project__body-inner--single-col {
-  grid-template-columns: 1fr !important;
-  max-width: 800px;
-}
-
-.body-text--dark {
-  color: var(--body-text);
-}
-
-/* Nav Tabs Personalizados */
-.custom-project-tabs {
-  border-bottom: 2px solid rgba(64, 37, 99, 0.12);
-  margin-bottom: 1.5rem;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.custom-project-tabs .nav-link {
-  color: var(--body-text);
-  font-family: var(--sans);
-  font-size: 0.88rem;
-  font-weight: 500;
-  border: none;
-  border-bottom: 2px solid transparent;
-  background: transparent;
-  padding: 0.5rem 1rem;
-  margin-bottom: -2px;
-  transition: all 0.2s ease;
-  border-radius: 0;
-}
-
-.custom-project-tabs .nav-link:hover {
-  color: var(--purple-light);
-  border-color: rgba(98, 94, 191, 0.4);
-}
-
-.custom-project-tabs .nav-link.active {
-  color: var(--purple);
-  font-weight: 700;
-  background: transparent;
-  border-bottom: 2px solid var(--purple);
-}
-
-.custom-tab-content {
-  padding-top: 0.5rem;
-}
-
-/* ── Galería de 3 Fotos en la misma fila ────────────────────────────────── */
-.project__gallery-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  margin-block: 1.25rem;
-  align-items: start;
-}
-
-.project__gallery-row .project__gallery-img-wrapper {
-  width: 100%;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  border: 1px solid rgba(64, 37, 99, 0.15);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  line-height: 0;
-}
-
-.project__gallery-row .project__gallery-img-wrapper:hover {
-  transform: scale(1.02);
-  border-color: var(--purple-light);
-}
-
-.project__gallery-row .project__gallery-img {
-  width: 100%;
-  height: 12rem;
-  object-fit: cover;
-  display: block;
-  border-radius: calc(var(--radius-sm) - 1px);
-}
-
-@media (min-width: 768px) {
-  .project__gallery-row .project__gallery-img {
-    height: 10rem; /* Mismo alto estándar que los otros proyectos */
-  }
-}
-
-/* Adaptación para pantallas pequeñas */
-@media (max-width: 576px) {
-  .project__gallery-row {
-    gap: 0.4rem;
-  }
-  .project__gallery-row .project__gallery-img {
-    height: 5rem;
-  }
-}
-
-/* ── Etiquetas Clickeables Invertidas ───────────────────────────────────── */
-.methods--inverted {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin-top: 1rem;
-  list-style: none;
-}
-
-.method--link {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  background: var(--light-bg);
-  color: var(--purple);
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(64, 37, 99, 0.2);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.method--link:hover {
-  background: var(--purple);
-  color: #ffffff;
-  border-color: var(--purple);
-  transform: translateY(-1px);
-}/* Transición suave para cambiar entre paneles */
-.tab-pane {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-}
-
-.tab-pane.show.active {
-  display: block;
-  opacity: 1;
-}
-
-/* ── Estilos Oscuros para Nav Tabs (Proyecto 8) ─────────────────────────── */
-
-.custom-project-tabs--dark {
-  border-bottom-color: rgba(237, 226, 255, 0.2);
-}
-
-.custom-project-tabs--dark .nav-link {
-  color: var(--lavender-hi);
-}
-
-.custom-project-tabs--dark .nav-link:hover {
-  color: #ffffff;
-  border-color: rgba(237, 226, 255, 0.4);
-}
-
-.custom-project-tabs--dark .nav-link.active {
-  color: #ffffff;
-  border-bottom: 2px solid var(--acento);
-}
-
-/* ── Etiquetas Clickeables Oscuras (Proyecto 8) ──────────────────────────── */
-
-.method--dark-link {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--lavender-hi);
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(237, 226, 255, 0.25);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.method--dark-link:hover {
-  background: var(--acento);
-  color: #ffffff;
-  border-color: var(--acento);
-  transform: translateY(-1px);
-}

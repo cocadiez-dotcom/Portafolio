@@ -19,10 +19,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="portfolio.css" />
-    <link rel="stylesheet" href="colores.css" />
   </head>
 
-  <body>
+  <section>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <!-- NAV -->
@@ -115,24 +114,34 @@
       </div>
     </header>
 
-    <main id="main-content">
+    <section id="main-content">
       <!-- GUIDELINES -->
-       <section id="projects" class="section section--dark" aria-label="Proyectos">
-      <div class="container">
-        <p class="label label--light fade-in">02 — Proyectos</p>
-        <h2 class="heading heading--light fade-in" data-delay="60">
-          Casos <em>seleccionados</em>
-        </h2>
-        <div class="projects__list fade-in" data-delay="120">
-          <!-- PROYECTO 1 -->
-          <article class="project" tabindex="0" aria-expanded="false" aria-label="Good Food — Caso. Expandir detalles"
-            onclick="toggleProject(this)" onkeydown="projectKey(event, this)">
-            <div class="project__header">
-              <div class="project__meta">
-                <span class="project__num" aria-hidden="true">01</span>
-                <div>
-                  <p class="project__tag">Mi propio sistema de diseño</p>
-                  <h3 class="project__title">
+      <section
+        id="projects"
+        class="section section--dark"
+        aria-label="Proyectos"
+      >
+        <div class="container">
+          <p class="label label--light fade-in">02 — Proyectos</p>
+          <h2 class="heading heading--light fade-in" data-delay="60">
+            Casos <em>seleccionados</em>
+          </h2>
+          <div class="projects__list fade-in" data-delay="120">
+            <!-- PROYECTO 1 -->
+            <article
+              class="project"
+              tabindex="0"
+              aria-expanded="false"
+              aria-label="Good Food — Caso. Expandir detalles"
+              onclick="toggleProject(this)"
+              onkeydown="projectKey(event, this)"
+            >
+              <div class="project__header">
+                <div class="project__meta">
+                  <span class="project__num" aria-hidden="true">01</span>
+                  <div>
+                    <p class="project__tag">Mi propio sistema de diseño</p>
+                    <h3 class="project__title">
                       Sistema de Diseño y Arquitectura Web
                     </h3>
                   </div>
@@ -214,13 +223,11 @@
                           class="tab-pane fade show active"
                           id="p8-wireframes"
                           role="tabpanel"
-                        ><p class="body-text body-text--light">
-                    <strong>Rol y Responsabilidades</strong>
-                    Como diseñadora UX/UI, fui responsable del diseño de alta fidelidad, de varias versiones del sitio, desarrollo en HTML/CSS, implementación de SEO, diseño y envío de mailings, investigación de usuarios y realización de tests de usabilidad tipo guerrilla para validar y mejorar la experiencia. Iteración con el cliente y asesoría permanente.
-                  </p>
+                        >
+                        
                           <p class="body-text body-text--light">
                             <strong>Estructuración y Wireframing</strong
-                            ><br /><br />
+                            >
                             En esta etapa se mapearon las tareas principales de
                             los usuarios para crear una navegación sin
                             fricciones. Se probaron distintas estructuras en
@@ -246,7 +253,6 @@
                                 loading="lazy"
                               />
                             </div>
-                            
                           </div>
 
                           <ul
@@ -288,69 +294,22 @@
                           class="tab-pane fade"
                           id="p8-paleta"
                           role="tabpanel"
-                        ><p class="body-text body-text--light">
+                        >
+                          <p class="body-text body-text--light"></p>
                           <div class="body-text body-text--light">
-                            <strong>Sistema de Color y Accesibilidad</strong
-                            ><br />
-                            Se construyó un sistema cromático jerarquizado
-                            basado en tonos púrpura y lavanda con acentos
-                            cálidos. Cada combinación fue validada con pruebas
-                            de contraste WCAG 2.1 AA para asegurar legibilidad
-                            cómoda tanto en temas claros como en interfaces
-                            nocturnas.
-                          
-                            Elegí Zilla Slab y la familia Ubuntu Sans para
-                            construir un sistema tipográfico con identidad
-                            propia, capaz de proyectar profesionalismo sin
-                            perder la cercanía con el usuario. Esta combinación
-                            fusiona la tradición editorial con la precisión del
-                            diseño digital moderno. Justificación técnica Ambas
-                            fuentes responden a los requerimientos de
-                            legibilidad y rendimiento en pantallas de alta y
-                            baja densidad. Zilla Slab (diseñada en 2017 por
-                            Typotheque para Mozilla) mantiene trazos firmes que
-                            sostienen la definición gráfica en tamaños grandes.
-                            Por su parte, la familia Ubuntu Sans (diseñada en
-                            2010 por Dalton Maag) optimiza el ritmo de lectura
-                            con sus terminaciones abiertas; sumado a esto, su
-                            versión monospaciada (Ubuntu Sans Mono) aporta un
-                            ancho fijo clave para estructurar la microtipografía
-                            —como fechas, métricas y etiquetas— manteniendo el
-                            orden visual en formatos reducidos. Justificación
-                            visual El sistema se sostiene en un contraste de
-                            polaridad entre los remates en bloque (slab serif)
-                            de Zilla Slab y las formas limpias y redondeadas de
-                            Ubuntu Sans. Zilla Slab actúa como un "ancla visual"
-                            para los títulos, ofreciendo un matiz editorial
-                            refinado y una jerarquía clara frente a las fuentes
-                            sans-serif convencionales. A su vez, Ubuntu Sans
-                            suaviza la interfaz con curvas fluidas, garantizando
-                            una estética limpia y funcional que distribuye el
-                            texto con equilibrio y sin saturación. Justificación
-                            psicológica El maridaje busca equilibrar autoridad y
-                            empatía. Zilla Slab evoca estabilidad, firmeza y
-                            estatus profesional en los encabezados principales,
-                            transmitiendo la seguridad de un producto bien
-                            consolidado. En contraparte, Ubuntu Sans inspira
-                            apertura y confianza gracias al concepto de
-                            "humanidad y comunidad" asociado a su origen; sus
-                            trazos redondeados reducen la carga cognitiva del
-                            usuario, generando una lectura amigable y accesible
-                            que hace que la interfaz se sienta honesta, moderna
-                            y cercana.Justificación de la escala tipográfica
-                            La escala tipográfica establece una jerarquía visual
-                            fluida, accesible y adaptable a cualquier
-                            dispositivo. Organiza la lectura en tres niveles
-                            clave: Zilla Slab destaca los titulares con
-                            carácter, Ubuntu Sans garantiza una lectura limpia
-                            en el cuerpo de texto y Ubuntu Sans Mono aporta
-                            precisión a los datos pequeños. Además, utiliza
-                            unidades relativas y escalado fluido (clamp()) para
-                            ajustar los tamaños de forma dinámica según el
-                            tamaño de la pantalla, manteniendo proporciones
-                            armónicas y respetando los estándares de
-                            accesibilidad (WCAG).
-                          
+                            <p class="body-text body-text--light">
+                              <strong>Sistema de Color y Accesibilidad</strong>
+                              un sistema cromático jerarquizado Crepusculo es el
+                              nombre de la paleta basado en tonos púrpura y
+                              lavanda con acentos cálidos mi paisaje al
+                              atardecer.
+                            </p>
+                            <p class="body-text body-text--light">
+                              Cada combinación fue validada con pruebas de
+                              contraste WCAG 2.1 AA para asegurar legibilidad
+                              cómoda tanto en temas claros como en interfaces
+                              nocturnas.
+                            </p>
                           </div>
 
                           <div class="project__gallery-row">
@@ -362,7 +321,6 @@
                                 loading="lazy"
                               />
                             </div>
-                            
                           </div>
 
                           <ul
@@ -395,20 +353,71 @@
                           class="tab-pane fade"
                           id="p8-tipografia"
                           role="tabpanel"
-                        ><p class="body-text body-text--light">
-                            <strong>Tipografía</strong
-                            ><br />
-                            Elegí Zilla Slab y la familia Ubuntu Sans para construir un sistema tipográfico con identidad propia, capaz de proyectar profesionalismo sin perder la cercanía con el usuario. Esta combinación fusiona la tradición editorial con la precisión del diseño digital moderno.
-
-Justificación técnica
-Ambas fuentes responden a los requerimientos de legibilidad y rendimiento en pantallas de alta y baja densidad. Zilla Slab (diseñada en 2017 por Typotheque para Mozilla) mantiene trazos firmes que sostienen la definición gráfica en tamaños grandes. Por su parte, la familia Ubuntu Sans (diseñada en 2010 por Dalton Maag) optimiza el ritmo de lectura con sus terminaciones abiertas; sumado a esto, su versión monospaciada (Ubuntu Sans Mono) aporta un ancho fijo clave para estructurar la microtipografía —como fechas, métricas y etiquetas— manteniendo el orden visual en formatos reducidos.
-
-Justificación visual
-El sistema se sostiene en un contraste de polaridad entre los remates en bloque (slab serif) de Zilla Slab y las formas limpias y redondeadas de Ubuntu Sans. Zilla Slab actúa como un "ancla visual" para los títulos, ofreciendo un matiz editorial refinado y una jerarquía clara frente a las fuentes sans-serif convencionales. A su vez, Ubuntu Sans suaviza la interfaz con curvas fluidas, garantizando una estética limpia y funcional que distribuye el texto con equilibrio y sin saturación.
-
-Justificación psicológica
-El maridaje busca equilibrar autoridad y empatía. Zilla Slab evoca estabilidad, firmeza y estatus profesional en los encabezados principales, transmitiendo la seguridad de un producto bien consolidado. En contraparte, Ubuntu Sans inspira apertura y confianza gracias al concepto de "humanidad y comunidad" asociado a su origen; sus trazos redondeados reducen la carga cognitiva del usuario, generando una lectura amigable y accesible que hace que la interfaz se sienta honesta, moderna y cercana.  Justificación de la escala tipográfica
-La escala tipográfica establece una jerarquía visual fluida, accesible y adaptable a cualquier dispositivo. Organiza la lectura en tres niveles clave: Zilla Slab destaca los titulares con carácter, Ubuntu Sans garantiza una lectura limpia en el cuerpo de texto y Ubuntu Sans Mono aporta precisión a los datos pequeños. Además, utiliza unidades relativas y escalado fluido (clamp()) para ajustar los tamaños de forma dinámica según el tamaño de la pantalla, manteniendo proporciones armónicas y respetando los estándares de accesibilidad (WCAG).
+                        >
+                          <p class="body-text body-text--light">
+                            <strong>Tipografía</strong>
+                            Elegí Zilla Slab y la familia Ubuntu Sans para
+                            construir un sistema tipográfico con identidad
+                            propia, capaz de proyectar profesionalismo sin
+                            perder la cercanía con el usuario. Esta combinación
+                            fusiona la tradición editorial con la precisión del
+                            diseño digital moderno.</p>
+                            
+                            <p class="body-text body-text--light">
+                             <strong>Justificación técnica </strong>
+                            Ambas fuentes responden a los requerimientos de
+                            legibilidad y rendimiento en pantallas de alta y
+                            baja densidad. Zilla Slab (diseñada en 2017 por
+                            Typotheque para Mozilla) mantiene trazos firmes que
+                            sostienen la definición gráfica en tamaños grandes.
+                            Por su parte, la familia Ubuntu Sans (diseñada en
+                            2010 por Dalton Maag) optimiza el ritmo de lectura
+                            con sus terminaciones abiertas; sumado a esto, su
+                            versión monospaciada (Ubuntu Sans Mono) aporta un
+                            ancho fijo clave para estructurar la microtipografía
+                            —como fechas, métricas y etiquetas— manteniendo el
+                            orden visual en formatos reducidos. </p>
+                            
+                            <p class="body-text body-text--light">
+                             <strong>Justificación visual</strong>
+                            El sistema se sostiene en un contraste de
+                            polaridad entre los remates en bloque (slab serif)
+                            de Zilla Slab y las formas limpias y redondeadas de
+                            Ubuntu Sans. Zilla Slab actúa como un "ancla visual"
+                            para los títulos, ofreciendo un matiz editorial
+                            refinado y una jerarquía clara frente a las fuentes
+                            sans-serif convencionales. A su vez, Ubuntu Sans
+                            suaviza la interfaz con curvas fluidas, garantizando
+                            una estética limpia y funcional que distribuye el
+                            texto con equilibrio y sin saturación.</p>
+                            
+                            <p class="body-text body-text--light">
+                            <strong>Justificación psicológica</strong>
+                            El maridaje busca equilibrar autoridad y
+                            empatía. Zilla Slab evoca estabilidad, firmeza y
+                            estatus profesional en los encabezados principales,
+                            transmitiendo la seguridad de un producto bien
+                            consolidado. En contraparte, Ubuntu Sans inspira
+                            apertura y confianza gracias al concepto de
+                            "humanidad y comunidad" asociado a su origen; sus
+                            trazos redondeados reducen la carga cognitiva del
+                            usuario, generando una lectura amigable y accesible
+                            que hace que la interfaz se sienta honesta, moderna
+                            y cercana.</p>
+                              <p class="body-text body-text--light">
+                            <strong>Justificación de la escala Tipográfica</strong>
+                            La escala tipográfica establece una jerarquía visual
+                            fluida, accesible y adaptable a cualquier
+                            dispositivo. Organiza la lectura en tres niveles
+                            clave: Zilla Slab destaca los titulares con
+                            carácter, Ubuntu Sans garantiza una lectura limpia
+                            en el cuerpo de texto y Ubuntu Sans Mono aporta
+                            precisión a los datos pequeños. Además, utiliza
+                            unidades relativas y escalado fluido (clamp()) para
+                            ajustar los tamaños de forma dinámica según el
+                            tamaño de la pantalla, manteniendo proporciones
+                            armónicas y respetando los estándares de
+                            accesibilidad (WCAG).
                           </p>
 
                           <div class="project__gallery-row">
@@ -420,7 +429,6 @@ La escala tipográfica establece una jerarquía visual fluida, accesible y adapt
                                 loading="lazy"
                               />
                             </div>
-                            
                           </div>
 
                           <ul
@@ -469,8 +477,6 @@ La escala tipográfica establece una jerarquía visual fluida, accesible y adapt
                                 loading="lazy"
                               />
                             </div>
-                            
-                            
                           </div>
 
                           <ul
@@ -513,7 +519,12 @@ La escala tipográfica establece una jerarquía visual fluida, accesible y adapt
               </div>
             </article>
 
-            <!-- PROYECTO 8 blanco -->
+            
+          </div>
+        </div>
+      </section>
+      </section>
+      <!-- PROYECTO 8 blanco -->
             <article
               class="project project--inverted"
               tabindex="0"
@@ -527,7 +538,7 @@ La escala tipográfica establece una jerarquía visual fluida, accesible y adapt
                   <span class="project__num" aria-hidden="true">07</span>
                   <div>
                     <p class="project__tag">
-                      Investigación &amp; Sistema de Diseño
+                      Investigación y Sistema de Diseño
                     </p>
                     <h3 class="project__title">
                       Sistema de Diseño y Arquitectura Web
@@ -614,7 +625,7 @@ La escala tipográfica establece una jerarquía visual fluida, accesible y adapt
                         >
                           <p class="body-text body-text--dark">
                             <strong>Estructuración y Wireframing</strong
-                            ><br /><br />
+                            >
                             En esta etapa se mapearon las tareas principales de
                             los usuarios para crear una navegación sin
                             fricciones. Se probaron distintas estructuras en
@@ -895,9 +906,7 @@ La escala tipográfica establece una jerarquía visual fluida, accesible y adapt
                 </div>
               </div>
             </article>
-          </div>
-        </div>
-      </section>
+            </section>
     </main>
 
     <footer class="footer">

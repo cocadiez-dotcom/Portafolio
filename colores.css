@@ -41,11 +41,7 @@
     }
 
     /* Encabezado */
-    header {
-      margin-bottom: 24px;
-      border-bottom: 1px solid #EDF2F7;
-      padding-bottom: 16px;
-    }
+   
     .report-title {
       font-size: 26px;
       font-weight: 700;
@@ -85,7 +81,7 @@
     /* Grillas de Colores (Desktop / Por defecto) */
     .color-grid-row-1 {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(7, 1fr);
       gap: 16px;
     }
     .color-grid-row-2 {
@@ -106,7 +102,7 @@
 
     .swatch {
       height: 40px;
-      border-radius: 6px;
+      border-radius: 40px;
       margin-bottom: 12px;
       border: 1px solid rgba(0, 0, 0, 0.08);
     }

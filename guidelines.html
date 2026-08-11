@@ -1,618 +1,1127 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Coca Diez — Diseñadora especializada en visual design de interfaces para productos digitales."
+    />
+    <title>Portfolio · Coca Diez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Ubuntu+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Ubuntu+Sans+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="colores.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Coca Diez — Diseñadora especializada en visual design de interfaces para productos digitales." />
-  <title>Portfolio · Coca Diez</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Ubuntu+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Ubuntu+Sans+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="portfolio.css" />
-</head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-<body>
-  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-
-  <!-- NAV -->
-  <header class="custom-nav" id="nav">
-    <nav class="custom-nav__inner" aria-label="Navegación principal">
-      <a href="#" class="custom-nav__logo" onclick="
+    <!-- NAV -->
+    <header class="custom-nav" id="nav">
+      <nav class="custom-nav__inner" aria-label="Navegación principal">
+        <a
+          href="#"
+          class="custom-nav__logo"
+          onclick="
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return false;
-          " aria-label="Volver al inicio">CD</a>
-      <ul class="custom-nav__links">
-        <li>
-          <a href="#about" class="custom-nav__link" onclick="navSmooth(event, '#about')">Sobre mí</a>
-        </li>
-        <li>
-          <a href="#projects" class="custom-nav__link" onclick="navSmooth(event, '#projects')">Proyectos</a>
-        </li>
-        <li>
-          <a href="#skills" class="custom-nav__link" onclick="navSmooth(event, '#skills')">Habilidades</a>
-        </li>
-        <li>
-          <a href="#contact" class="custom-nav__link" onclick="navSmooth(event, '#contact')">Contacto</a>
-        </li>
-      </ul>
-      <a href="#contact" class="btn btn--solid custom-nav__cta" onclick="navSmooth(event, '#contact')">Trabajemos
-        juntos</a>
-      <button class="custom-nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false"
-        aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-    <div class="custom-nav__mobile" id="mobile-menu" hidden>
-      <ul>
-        <li>
-          <a href="#about" onclick="mobileNav(event, '#about')">Sobre mí</a>
-        </li>
-        <li>
-          <a href="#projects" onclick="mobileNav(event, '#projects')">Proyectos</a>
-        </li>
-        <li>
-          <a href="#skills" onclick="mobileNav(event, '#skills')">Habilidades</a>
-        </li>
-        <li>
-          <a href="#contact" onclick="mobileNav(event, '#contact')">Contacto</a>
-        </li>
-      </ul>
-      <button class="btn btn--solid" onclick="mobileNav(event, '#contact')">
-        Trabajemos juntos
-      </button>
-    </div>
-  </header>
+          "
+          aria-label="Volver al inicio"
+          >CD</a
+        >
+        <ul class="custom-nav__links">
+          <li>
+            <a
+              href="#about"
+              class="custom-nav__link"
+              onclick="navSmooth(event, '#about')"
+              >Sobre mí</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="custom-nav__link"
+              onclick="navSmooth(event, '#projects')"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="custom-nav__link"
+              onclick="navSmooth(event, '#skills')"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="custom-nav__link"
+              onclick="navSmooth(event, '#contact')"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+        <a
+          href="#contact"
+          class="btn btn--solid custom-nav__cta"
+          onclick="navSmooth(event, '#contact')"
+          >Trabajemos juntos</a
+        >
+        <button
+          class="custom-nav__hamburger"
+          id="hamburger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <div class="custom-nav__mobile" id="mobile-menu" hidden>
+        <ul>
+          <li>
+            <a href="#about" onclick="mobileNav(event, '#about')">Sobre mí</a>
+          </li>
+          <li>
+            <a href="#projects" onclick="mobileNav(event, '#projects')"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a href="#skills" onclick="mobileNav(event, '#skills')"
+              >Habilidades</a
+            >
+          </li>
+          <li>
+            <a href="#contact" onclick="mobileNav(event, '#contact')"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+        <button class="btn btn--solid" onclick="mobileNav(event, '#contact')">
+          Trabajemos juntos
+        </button>
+      </div>
+    </header>
 
-  <main id="main-content">
-   
-
-   
-    <!-- GUIDELINES -->
-    <section id="projects" class="section section--dark" aria-label="Proyectos">
+    <main id="main-content">
+      <!-- GUIDELINES -->
+       <section id="projects" class="section section--dark" aria-label="Proyectos">
       <div class="container">
         <p class="label label--light fade-in">02 — Proyectos</p>
         <h2 class="heading heading--light fade-in" data-delay="60">
-          Case Studies <em>seleccionados</em>
+          Casos <em>seleccionados</em>
         </h2>
         <div class="projects__list fade-in" data-delay="120">
-
-          <!-- PROYECTO 8 -->
-          <article class="project" tabindex="0" aria-expanded="false" aria-label="Proyecto 7 — Caso de Estudio. Expandir detalles"
+          <!-- PROYECTO 1 -->
+          <article class="project" tabindex="0" aria-expanded="false" aria-label="Good Food — Caso. Expandir detalles"
             onclick="toggleProject(this)" onkeydown="projectKey(event, this)">
             <div class="project__header">
               <div class="project__meta">
-                <span class="project__num" aria-hidden="true">07</span>
+                <span class="project__num" aria-hidden="true">01</span>
                 <div>
-                  <p class="project__tag">Investigación &amp; Sistema de Diseño</p>
+                  <p class="project__tag">Mi propio sistema de diseño</p>
                   <h3 class="project__title">
-                    Sistema de Diseño y Arquitectura Web
-                  </h3>
+                      Sistema de Diseño y Arquitectura Web
+                    </h3>
+                  </div>
+                </div>
+                <div class="project__toggle" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M7 1v12M1 7h12"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
               </div>
-              <div class="project__toggle" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-              </div>
-            </div>
-            <div class="project__body">
-              <div class="project__body-inner project__body-inner--single-col">
-                <div class="project__details">
-                  
-                  <!-- NAV TABS -->
-                  <div class="project__tabs" onclick="event.stopPropagation();">
-                    <ul class="nav nav-tabs custom-project-tabs custom-project-tabs--dark" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link active" type="button" role="tab" aria-selected="true" onclick="changeTab(event, 'p8-wireframes')">Wireframes</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" type="button" role="tab" aria-selected="false" onclick="changeTab(event, 'p8-paleta')">Paleta de Color</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" type="button" role="tab" aria-selected="false" onclick="changeTab(event, 'p8-tipografia')">Tipografía</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" type="button" role="tab" aria-selected="false" onclick="changeTab(event, 'p8-html')">HTML Semántico</button>
-                      </li>
-                    </ul>
+              <div class="project__body">
+                <div
+                  class="project__body-inner project__body-inner--single-col"
+                >
+                  <div class="project__details">
+                    <!-- NAV TABS -->
+                    <div
+                      class="project__tabs"
+                      onclick="event.stopPropagation()"
+                    >
+                      <ul
+                        class="nav nav-tabs custom-project-tabs custom-project-tabs--dark"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            role="tab"
+                            aria-selected="true"
+                            onclick="changeTab(event, 'p8-wireframes')"
+                          >
+                            Wireframes
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            onclick="changeTab(event, 'p8-paleta')"
+                          >
+                            Paleta de Color
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            onclick="changeTab(event, 'p8-tipografia')"
+                          >
+                            Tipografía
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            onclick="changeTab(event, 'p8-html')"
+                          >
+                            HTML Semántico
+                          </button>
+                        </li>
+                      </ul>
 
-                    <div class="tab-content custom-tab-content">
-                      <!-- TAB 1: WIREFRAMES -->
-                      <div class="tab-pane fade show active" id="p8-wireframes" role="tabpanel">
-                        <p class="body-text body-text--light">
-                          <strong>Estructuración y Wireframing</strong><br /><br />
-                          En esta etapa se mapearon las tareas principales de los usuarios para crear una navegación sin fricciones. Se probaron distintas estructuras en baja fidelidad antes de avanzar a componentes definitivos, garantizando flujos ágiles y directos hacia los objetivos clave de la plataforma.
-                        </p>
+                      <div class="tab-content custom-tab-content">
+                        <!-- TAB 1: WIREFRAMES -->
+                        <div
+                          class="tab-pane fade show active"
+                          id="p8-wireframes"
+                          role="tabpanel"
+                        ><p class="body-text body-text--light">
+                    <strong>Rol y Responsabilidades</strong>
+                    Como diseñadora UX/UI, fui responsable del diseño de alta fidelidad, de varias versiones del sitio, desarrollo en HTML/CSS, implementación de SEO, diseño y envío de mailings, investigación de usuarios y realización de tests de usabilidad tipo guerrilla para validar y mejorar la experiencia. Iteración con el cliente y asesoría permanente.
+                  </p>
+                          <p class="body-text body-text--light">
+                            <strong>Estructuración y Wireframing</strong
+                            ><br /><br />
+                            En esta etapa se mapearon las tareas principales de
+                            los usuarios para crear una navegación sin
+                            fricciones. Se probaron distintas estructuras en
+                            baja fidelidad antes de avanzar a componentes
+                            definitivos, garantizando flujos ágiles y directos
+                            hacia los objetivos clave de la plataforma.
+                          </p>
 
-                        <div class="project__gallery-row">
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/24g.webp" alt="Wireframe 1" class="project__gallery-img" loading="lazy" />
+                          <div class="project__gallery-row">
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/wireframe-desktop.webp"
+                                alt="Wireframe 1"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/wireframe-movil.webp"
+                                alt="Wireframe 2"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            
                           </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/02g.webp" alt="Wireframe 2" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/05g.webp" alt="Wireframe 3" class="project__gallery-img" loading="lazy" />
-                          </div>
+
+                          <ul
+                            class="methods"
+                            aria-label="Metodologías aplicadas"
+                          >
+                            <li>
+                              <a
+                                href="https://example.com/balsamiq"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >Balsamiq</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/figma"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >Figma Prototyping</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/user-flow"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >User Flow</a
+                              >
+                            </li>
+                          </ul>
                         </div>
 
-                        <ul class="methods" aria-label="Metodologías aplicadas">
-                          <li><a href="https://example.com/balsamiq" target="_blank" rel="noopener noreferrer" class="method method--dark-link">Balsamiq</a></li>
-                          <li><a href="https://example.com/figma" target="_blank" rel="noopener noreferrer" class="method method--dark-link">Figma Prototyping</a></li>
-                          <li><a href="https://example.com/user-flow" target="_blank" rel="noopener noreferrer" class="method method--dark-link">User Flow</a></li>
-                        </ul>
-                      </div>
+                        <!-- TAB 2: PALETA DE COLOR -->
+                        <div
+                          class="tab-pane fade"
+                          id="p8-paleta"
+                          role="tabpanel"
+                        ><p class="body-text body-text--light">
+                          <div class="body-text body-text--light">
+                            <strong>Sistema de Color y Accesibilidad</strong
+                            ><br />
+                            Se construyó un sistema cromático jerarquizado
+                            basado en tonos púrpura y lavanda con acentos
+                            cálidos. Cada combinación fue validada con pruebas
+                            de contraste WCAG 2.1 AA para asegurar legibilidad
+                            cómoda tanto en temas claros como en interfaces
+                            nocturnas.
+                          
+                            Elegí Zilla Slab y la familia Ubuntu Sans para
+                            construir un sistema tipográfico con identidad
+                            propia, capaz de proyectar profesionalismo sin
+                            perder la cercanía con el usuario. Esta combinación
+                            fusiona la tradición editorial con la precisión del
+                            diseño digital moderno. Justificación técnica Ambas
+                            fuentes responden a los requerimientos de
+                            legibilidad y rendimiento en pantallas de alta y
+                            baja densidad. Zilla Slab (diseñada en 2017 por
+                            Typotheque para Mozilla) mantiene trazos firmes que
+                            sostienen la definición gráfica en tamaños grandes.
+                            Por su parte, la familia Ubuntu Sans (diseñada en
+                            2010 por Dalton Maag) optimiza el ritmo de lectura
+                            con sus terminaciones abiertas; sumado a esto, su
+                            versión monospaciada (Ubuntu Sans Mono) aporta un
+                            ancho fijo clave para estructurar la microtipografía
+                            —como fechas, métricas y etiquetas— manteniendo el
+                            orden visual en formatos reducidos. Justificación
+                            visual El sistema se sostiene en un contraste de
+                            polaridad entre los remates en bloque (slab serif)
+                            de Zilla Slab y las formas limpias y redondeadas de
+                            Ubuntu Sans. Zilla Slab actúa como un "ancla visual"
+                            para los títulos, ofreciendo un matiz editorial
+                            refinado y una jerarquía clara frente a las fuentes
+                            sans-serif convencionales. A su vez, Ubuntu Sans
+                            suaviza la interfaz con curvas fluidas, garantizando
+                            una estética limpia y funcional que distribuye el
+                            texto con equilibrio y sin saturación. Justificación
+                            psicológica El maridaje busca equilibrar autoridad y
+                            empatía. Zilla Slab evoca estabilidad, firmeza y
+                            estatus profesional en los encabezados principales,
+                            transmitiendo la seguridad de un producto bien
+                            consolidado. En contraparte, Ubuntu Sans inspira
+                            apertura y confianza gracias al concepto de
+                            "humanidad y comunidad" asociado a su origen; sus
+                            trazos redondeados reducen la carga cognitiva del
+                            usuario, generando una lectura amigable y accesible
+                            que hace que la interfaz se sienta honesta, moderna
+                            y cercana.Justificación de la escala tipográfica
+                            La escala tipográfica establece una jerarquía visual
+                            fluida, accesible y adaptable a cualquier
+                            dispositivo. Organiza la lectura en tres niveles
+                            clave: Zilla Slab destaca los titulares con
+                            carácter, Ubuntu Sans garantiza una lectura limpia
+                            en el cuerpo de texto y Ubuntu Sans Mono aporta
+                            precisión a los datos pequeños. Además, utiliza
+                            unidades relativas y escalado fluido (clamp()) para
+                            ajustar los tamaños de forma dinámica según el
+                            tamaño de la pantalla, manteniendo proporciones
+                            armónicas y respetando los estándares de
+                            accesibilidad (WCAG).
+                          
+                          </div>
 
-                      <!-- TAB 2: PALETA DE COLOR -->
-                      <div class="tab-pane fade" id="p8-paleta" role="tabpanel">
-                        <p class="body-text body-text--light">
-                          <strong>Sistema de Color y Accesibilidad</strong><br /><br />
-                          Se construyó un sistema cromático jerarquizado basado en tonos púrpura y lavanda con acentos cálidos. Cada combinación fue validada con pruebas de contraste WCAG 2.1 AA para asegurar legibilidad cómoda tanto en temas claros como en interfaces nocturnas.
-                        </p>
+                          <div class="project__gallery-row">
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/cielo.webp"
+                                alt="Paleta de color 1"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            
+                          </div>
 
-                        <div class="project__gallery-row">
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/08g.webp" alt="Paleta de color 1" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/22g.webp" alt="Paleta de color 2" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/23g.webp" alt="Paleta de color 3" class="project__gallery-img" loading="lazy" />
-                          </div>
+                          <ul
+                            class="methods"
+                            aria-label="Metodologías aplicadas"
+                          >
+                            <li>
+                              <a
+                                href="https://example.com/wcag"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >WCAG 2.1 AA</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/color-tokens"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >Color Tokens</a
+                              >
+                            </li>
+                          </ul>
                         </div>
 
-                        <ul class="methods" aria-label="Metodologías aplicadas">
-                          <li><a href="https://example.com/wcag" target="_blank" rel="noopener noreferrer" class="method method--dark-link">WCAG 2.1 AA</a></li>
-                          <li><a href="https://example.com/color-tokens" target="_blank" rel="noopener noreferrer" class="method method--dark-link">Color Tokens</a></li>
-                        </ul>
-                      </div>
+                        <!-- TAB 3: TIPOGRAFÍA -->
+                        <div
+                          class="tab-pane fade"
+                          id="p8-tipografia"
+                          role="tabpanel"
+                        ><p class="body-text body-text--light">
+                            <strong>Tipografía</strong
+                            ><br />
+                            Elegí Zilla Slab y la familia Ubuntu Sans para construir un sistema tipográfico con identidad propia, capaz de proyectar profesionalismo sin perder la cercanía con el usuario. Esta combinación fusiona la tradición editorial con la precisión del diseño digital moderno.
 
-                      <!-- TAB 3: TIPOGRAFÍA -->
-                      <div class="tab-pane fade" id="p8-tipografia" role="tabpanel">
-                        <p class="body-text body-text--light">
-                          <strong>Escala Tipográfica y Legibilidad</strong><br /><br />
-                          Se combinó la calidez de <em>Zilla Slab</em> para los encabezados editoriales con la limpieza de <em>Ubuntu Sans</em> en los cuerpos de texto. Esta combinación logra un tono profesional pero cercano, optimizando la lectura en dispositivos móviles.
-                        </p>
+Justificación técnica
+Ambas fuentes responden a los requerimientos de legibilidad y rendimiento en pantallas de alta y baja densidad. Zilla Slab (diseñada en 2017 por Typotheque para Mozilla) mantiene trazos firmes que sostienen la definición gráfica en tamaños grandes. Por su parte, la familia Ubuntu Sans (diseñada en 2010 por Dalton Maag) optimiza el ritmo de lectura con sus terminaciones abiertas; sumado a esto, su versión monospaciada (Ubuntu Sans Mono) aporta un ancho fijo clave para estructurar la microtipografía —como fechas, métricas y etiquetas— manteniendo el orden visual en formatos reducidos.
 
-                        <div class="project__gallery-row">
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/10g.webp" alt="Tipografía 1" class="project__gallery-img" loading="lazy" />
+Justificación visual
+El sistema se sostiene en un contraste de polaridad entre los remates en bloque (slab serif) de Zilla Slab y las formas limpias y redondeadas de Ubuntu Sans. Zilla Slab actúa como un "ancla visual" para los títulos, ofreciendo un matiz editorial refinado y una jerarquía clara frente a las fuentes sans-serif convencionales. A su vez, Ubuntu Sans suaviza la interfaz con curvas fluidas, garantizando una estética limpia y funcional que distribuye el texto con equilibrio y sin saturación.
+
+Justificación psicológica
+El maridaje busca equilibrar autoridad y empatía. Zilla Slab evoca estabilidad, firmeza y estatus profesional en los encabezados principales, transmitiendo la seguridad de un producto bien consolidado. En contraparte, Ubuntu Sans inspira apertura y confianza gracias al concepto de "humanidad y comunidad" asociado a su origen; sus trazos redondeados reducen la carga cognitiva del usuario, generando una lectura amigable y accesible que hace que la interfaz se sienta honesta, moderna y cercana.  Justificación de la escala tipográfica
+La escala tipográfica establece una jerarquía visual fluida, accesible y adaptable a cualquier dispositivo. Organiza la lectura en tres niveles clave: Zilla Slab destaca los titulares con carácter, Ubuntu Sans garantiza una lectura limpia en el cuerpo de texto y Ubuntu Sans Mono aporta precisión a los datos pequeños. Además, utiliza unidades relativas y escalado fluido (clamp()) para ajustar los tamaños de forma dinámica según el tamaño de la pantalla, manteniendo proporciones armónicas y respetando los estándares de accesibilidad (WCAG).
+                          </p>
+
+                          <div class="project__gallery-row">
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/escala-tipografica.webp"
+                                alt="Tipografía 1"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            
                           </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/11g.webp" alt="Tipografía 2" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/13g.webp" alt="Tipografía 3" class="project__gallery-img" loading="lazy" />
-                          </div>
+
+                          <ul
+                            class="methods"
+                            aria-label="Metodologías aplicadas"
+                          >
+                            <li>
+                              <a
+                                href="https://fonts.google.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >Google Fonts</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/typography"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >Typescale</a
+                              >
+                            </li>
+                          </ul>
                         </div>
 
-                        <ul class="methods" aria-label="Metodologías aplicadas">
-                          <li><a href="https://fonts.google.com" target="_blank" rel="noopener noreferrer" class="method method--dark-link">Google Fonts</a></li>
-                          <li><a href="https://example.com/typography" target="_blank" rel="noopener noreferrer" class="method method--dark-link">Modular Scale</a></li>
-                        </ul>
-                      </div>
+                        <!-- TAB 4: HTML SEMÁNTICO -->
+                        <div class="tab-pane fade" id="p8-html" role="tabpanel">
+                          <p class="body-text body-text--light">
+                            <strong>Maquetación Limpia y Hand-off</strong
+                            ><br /><br />
+                            El maquetado utiliza etiquetas nativas de HTML5
+                            (`header`, `main`, `section`, `article`),
+                            organizadas para facilitar la interacción con
+                            tecnologías asistivas y acelerar la posterior
+                            integración con el equipo de desarrollo front-end.
+                          </p>
 
-                      <!-- TAB 4: HTML SEMÁNTICO -->
-                      <div class="tab-pane fade" id="p8-html" role="tabpanel">
-                        <p class="body-text body-text--light">
-                          <strong>Maquetación Limpia y Hand-off</strong><br /><br />
-                          El maquetado utiliza etiquetas nativas de HTML5 (`header`, `main`, `section`, `article`), organizadas para facilitar la interacción con tecnologías asistivas y acelerar la posterior integración con el equipo de desarrollo front-end.
-                        </p>
+                          <div class="project__gallery-row">
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/css-simulado.webp"
+                                alt="HTML Semántico 1"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            
+                            
+                          </div>
 
-                        <div class="project__gallery-row">
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/14g.webp" alt="HTML Semántico 1" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/01cyt.webp" alt="HTML Semántico 2" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/02cyt.webp" alt="HTML Semántico 3" class="project__gallery-img" loading="lazy" />
-                          </div>
+                          <ul
+                            class="methods"
+                            aria-label="Metodologías aplicadas"
+                          >
+                            <li>
+                              <a
+                                href="https://developer.mozilla.org/es/docs/Web/HTML"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >HTML5 Semántico</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/aria"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >ARIA Attributes</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/seo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--dark-link"
+                                >SEO On-Page</a
+                              >
+                            </li>
+                          </ul>
                         </div>
-
-                        <ul class="methods" aria-label="Metodologías aplicadas">
-                          <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="method method--dark-link">HTML5 Semántico</a></li>
-                          <li><a href="https://example.com/aria" target="_blank" rel="noopener noreferrer" class="method method--dark-link">ARIA Attributes</a></li>
-                          <li><a href="https://example.com/seo" target="_blank" rel="noopener noreferrer" class="method method--dark-link">SEO On-Page</a></li>
-                        </ul>
                       </div>
-
                     </div>
                   </div>
-
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- PROYECTO 8 blanco -->
-          <article class="project project--inverted" tabindex="0" aria-expanded="false" aria-label="Proyecto 7 — Caso de Estudio. Expandir detalles"
-            onclick="toggleProject(this)" onkeydown="projectKey(event, this)">
-            <div class="project__header">
-              <div class="project__meta">
-                <span class="project__num" aria-hidden="true">07</span>
-                <div>
-                  <p class="project__tag">Investigación &amp; Sistema de Diseño</p>
-                  <h3 class="project__title">
-                    Sistema de Diseño y Arquitectura Web
-                  </h3>
+            <!-- PROYECTO 8 blanco -->
+            <article
+              class="project project--inverted"
+              tabindex="0"
+              aria-expanded="false"
+              aria-label="Proyecto 7 — Caso de Estudio. Expandir detalles"
+              onclick="toggleProject(this)"
+              onkeydown="projectKey(event, this)"
+            >
+              <div class="project__header">
+                <div class="project__meta">
+                  <span class="project__num" aria-hidden="true">07</span>
+                  <div>
+                    <p class="project__tag">
+                      Investigación &amp; Sistema de Diseño
+                    </p>
+                    <h3 class="project__title">
+                      Sistema de Diseño y Arquitectura Web
+                    </h3>
+                  </div>
+                </div>
+                <div class="project__toggle" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M7 1v12M1 7h12"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
               </div>
-              <div class="project__toggle" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-              </div>
-            </div>
-            <div class="project__body">
-              <div class="project__body-inner project__body-inner--single-col">
-                <div class="project__details">
-                  
-                 <!-- NAV TABS -->
-                  <div class="project__tabs" onclick="event.stopPropagation();">
-                    <ul class="nav nav-tabs custom-project-tabs" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link active" type="button" role="tab" aria-selected="true" onclick="changeTab(event, 'wireframes')">Wireframes</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" type="button" role="tab" aria-selected="false" onclick="changeTab(event, 'paleta')">Paleta de Color</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" type="button" role="tab" aria-selected="false" onclick="changeTab(event, 'tipografia')">Tipografía</button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" type="button" role="tab" aria-selected="false" onclick="changeTab(event, 'html')">HTML Semántico</button>
-                      </li>
-                    </ul>
+              <div class="project__body">
+                <div
+                  class="project__body-inner project__body-inner--single-col"
+                >
+                  <div class="project__details">
+                    <!-- NAV TABS -->
+                    <div
+                      class="project__tabs"
+                      onclick="event.stopPropagation()"
+                    >
+                      <ul
+                        class="nav nav-tabs custom-project-tabs"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link active"
+                            type="button"
+                            role="tab"
+                            aria-selected="true"
+                            onclick="changeTab(event, 'wireframes')"
+                          >
+                            Wireframes
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            onclick="changeTab(event, 'paleta')"
+                          >
+                            Paleta de Color
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            onclick="changeTab(event, 'tipografia')"
+                          >
+                            Tipografía
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            class="nav-link"
+                            type="button"
+                            role="tab"
+                            aria-selected="false"
+                            onclick="changeTab(event, 'html')"
+                          >
+                            HTML Semántico
+                          </button>
+                        </li>
+                      </ul>
 
-                    <div class="tab-content custom-tab-content">
-                      <!-- TAB 1: WIREFRAMES -->
-                      <div class="tab-pane fade show active" id="wireframes" role="tabpanel">
-                        <p class="body-text body-text--dark">
-                          <strong>Estructuración y Wireframing</strong><br /><br />
-                          En esta etapa se mapearon las tareas principales de los usuarios para crear una navegación sin fricciones. Se probaron distintas estructuras en baja fidelidad antes de avanzar a componentes definitivos, garantizando flujos ágiles y directos hacia los objetivos clave de la plataforma.
-                        </p>
+                      <div class="tab-content custom-tab-content">
+                        <!-- TAB 1: WIREFRAMES -->
+                        <div
+                          class="tab-pane fade show active"
+                          id="wireframes"
+                          role="tabpanel"
+                        >
+                          <p class="body-text body-text--dark">
+                            <strong>Estructuración y Wireframing</strong
+                            ><br /><br />
+                            En esta etapa se mapearon las tareas principales de
+                            los usuarios para crear una navegación sin
+                            fricciones. Se probaron distintas estructuras en
+                            baja fidelidad antes de avanzar a componentes
+                            definitivos, garantizando flujos ágiles y directos
+                            hacia los objetivos clave de la plataforma.
+                          </p>
 
-                        <div class="project__gallery-row">
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/24g.webp" alt="Wireframe 1" class="project__gallery-img" loading="lazy" />
+                          <div class="project__gallery-row">
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/24g.webp"
+                                alt="Wireframe 1"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/02g.webp"
+                                alt="Wireframe 2"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/05g.webp"
+                                alt="Wireframe 3"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
                           </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/02g.webp" alt="Wireframe 2" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/05g.webp" alt="Wireframe 3" class="project__gallery-img" loading="lazy" />
-                          </div>
+
+                          <ul
+                            class="methods methods--inverted"
+                            aria-label="Metodologías aplicadas"
+                          >
+                            <li>
+                              <a
+                                href="https://example.com/balsamiq"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >Balsamiq</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/figma"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >Figma Prototyping</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/user-flow"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >User Flow</a
+                              >
+                            </li>
+                          </ul>
                         </div>
 
-                        <ul class="methods methods--inverted" aria-label="Metodologías aplicadas">
-                          <li><a href="https://example.com/balsamiq" target="_blank" rel="noopener noreferrer" class="method method--link">Balsamiq</a></li>
-                          <li><a href="https://example.com/figma" target="_blank" rel="noopener noreferrer" class="method method--link">Figma Prototyping</a></li>
-                          <li><a href="https://example.com/user-flow" target="_blank" rel="noopener noreferrer" class="method method--link">User Flow</a></li>
-                        </ul>
-                      </div>
+                        <!-- TAB 2: PALETA DE COLOR -->
+                        <div class="tab-pane fade" id="paleta" role="tabpanel">
+                          <p class="body-text body-text--dark">
+                            <strong>Sistema de Color y Accesibilidad</strong
+                            ><br /><br />
+                            Se construyó un sistema cromático jerarquizado
+                            basado en tonos púrpura y lavanda con acentos
+                            cálidos. Cada combinación fue validada con pruebas
+                            de contraste WCAG 2.1 AA para asegurar legibilidad
+                            cómoda tanto en temas claros como en interfaces
+                            nocturnas.
+                          </p>
 
-                      <!-- TAB 2: PALETA DE COLOR -->
-                      <div class="tab-pane fade" id="paleta" role="tabpanel">
-                        <p class="body-text body-text--dark">
-                          <strong>Sistema de Color y Accesibilidad</strong><br /><br />
-                          Se construyó un sistema cromático jerarquizado basado en tonos púrpura y lavanda con acentos cálidos. Cada combinación fue validada con pruebas de contraste WCAG 2.1 AA para asegurar legibilidad cómoda tanto en temas claros como en interfaces nocturnas.
-                        </p>
+                          <div class="project__gallery-row">
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/08g.webp"
+                                alt="Paleta de color 1"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/22g.webp"
+                                alt="Paleta de color 2"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/23g.webp"
+                                alt="Paleta de color 3"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
 
-                        <div class="project__gallery-row">
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/08g.webp" alt="Paleta de color 1" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/22g.webp" alt="Paleta de color 2" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/23g.webp" alt="Paleta de color 3" class="project__gallery-img" loading="lazy" />
-                          </div>
+                          <ul
+                            class="methods methods--inverted"
+                            aria-label="Metodologías aplicadas"
+                          >
+                            <li>
+                              <a
+                                href="https://example.com/wcag"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >WCAG 2.1 AA</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/color-tokens"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >Color Tokens</a
+                              >
+                            </li>
+                          </ul>
                         </div>
 
-                        <ul class="methods methods--inverted" aria-label="Metodologías aplicadas">
-                          <li><a href="https://example.com/wcag" target="_blank" rel="noopener noreferrer" class="method method--link">WCAG 2.1 AA</a></li>
-                          <li><a href="https://example.com/color-tokens" target="_blank" rel="noopener noreferrer" class="method method--link">Color Tokens</a></li>
-                        </ul>
-                      </div>
+                        <!-- TAB 3: TIPOGRAFÍA -->
+                        <div
+                          class="tab-pane fade"
+                          id="tipografia"
+                          role="tabpanel"
+                        >
+                          <p class="body-text body-text--dark">
+                            <strong>Escala Tipográfica y Legibilidad</strong
+                            ><br /><br />
+                            Se combinó la calidez de <em>Zilla Slab</em> para
+                            los encabezados editoriales con la limpieza de
+                            <em>Ubuntu Sans</em> en los cuerpos de texto. Esta
+                            combinación logra un tono profesional pero cercano,
+                            optimizando la lectura en dispositivos móviles.
+                          </p>
 
-                      <!-- TAB 3: TIPOGRAFÍA -->
-                      <div class="tab-pane fade" id="tipografia" role="tabpanel">
-                        <p class="body-text body-text--dark">
-                          <strong>Escala Tipográfica y Legibilidad</strong><br /><br />
-                          Se combinó la calidez de <em>Zilla Slab</em> para los encabezados editoriales con la limpieza de <em>Ubuntu Sans</em> en los cuerpos de texto. Esta combinación logra un tono profesional pero cercano, optimizando la lectura en dispositivos móviles.
-                        </p>
+                          <div class="project__gallery-row">
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/10g.webp"
+                                alt="Tipografía 1"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/11g.webp"
+                                alt="Tipografía 2"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/13g.webp"
+                                alt="Tipografía 3"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
 
-                        <div class="project__gallery-row">
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/10g.webp" alt="Tipografía 1" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/11g.webp" alt="Tipografía 2" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/13g.webp" alt="Tipografía 3" class="project__gallery-img" loading="lazy" />
-                          </div>
+                          <ul
+                            class="methods methods--inverted"
+                            aria-label="Metodologías aplicadas"
+                          >
+                            <li>
+                              <a
+                                href="https://fonts.google.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >Google Fonts</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/typography"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >Modular Scale</a
+                              >
+                            </li>
+                          </ul>
                         </div>
 
-                        <ul class="methods methods--inverted" aria-label="Metodologías aplicadas">
-                          <li><a href="https://fonts.google.com" target="_blank" rel="noopener noreferrer" class="method method--link">Google Fonts</a></li>
-                          <li><a href="https://example.com/typography" target="_blank" rel="noopener noreferrer" class="method method--link">Modular Scale</a></li>
-                        </ul>
-                      </div>
+                        <!-- TAB 4: HTML SEMÁNTICO -->
+                        <div class="tab-pane fade" id="html" role="tabpanel">
+                          <p class="body-text body-text--dark">
+                            <strong>Maquetación Limpia y Hand-off</strong
+                            ><br /><br />
+                            El maquetado utiliza etiquetas nativas de HTML5
+                            (`header`, `main`, `section`, `article`),
+                            organizadas para facilitar la interacción con
+                            tecnologías asistivas y acelerar la posterior
+                            integración con el equipo de desarrollo front-end.
+                          </p>
 
-                      <!-- TAB 4: HTML SEMÁNTICO -->
-                      <div class="tab-pane fade" id="html" role="tabpanel">
-                        <p class="body-text body-text--dark">
-                          <strong>Maquetación Limpia y Hand-off</strong><br /><br />
-                          El maquetado utiliza etiquetas nativas de HTML5 (`header`, `main`, `section`, `article`), organizadas para facilitar la interacción con tecnologías asistivas y acelerar la posterior integración con el equipo de desarrollo front-end.
-                        </p>
+                          <div class="project__gallery-row">
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/14g.webp"
+                                alt="HTML Semántico 1"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/01cyt.webp"
+                                alt="HTML Semántico 2"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                            <div class="project__gallery-img-wrapper">
+                              <img
+                                src="images/02cyt.webp"
+                                alt="HTML Semántico 3"
+                                class="project__gallery-img"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
 
-                        <div class="project__gallery-row">
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/14g.webp" alt="HTML Semántico 1" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/01cyt.webp" alt="HTML Semántico 2" class="project__gallery-img" loading="lazy" />
-                          </div>
-                          <div class="project__gallery-img-wrapper">
-                            <img src="images/02cyt.webp" alt="HTML Semántico 3" class="project__gallery-img" loading="lazy" />
-                          </div>
+                          <ul
+                            class="methods methods--inverted"
+                            aria-label="Metodologías aplicadas"
+                          >
+                            <li>
+                              <a
+                                href="https://developer.mozilla.org/es/docs/Web/HTML"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >HTML5 Semántico</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/aria"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >ARIA Attributes</a
+                              >
+                            </li>
+                            <li>
+                              <a
+                                href="https://example.com/seo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="method method--link"
+                                >SEO On-Page</a
+                              >
+                            </li>
+                          </ul>
                         </div>
-
-                        <ul class="methods methods--inverted" aria-label="Metodologías aplicadas">
-                          <li><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="method method--link">HTML5 Semántico</a></li>
-                          <li><a href="https://example.com/aria" target="_blank" rel="noopener noreferrer" class="method method--link">ARIA Attributes</a></li>
-                          <li><a href="https://example.com/seo" target="_blank" rel="noopener noreferrer" class="method method--link">SEO On-Page</a></li>
-                        </ul>
                       </div>
-
                     </div>
                   </div>
-
                 </div>
               </div>
-            </div>
-          </article>
-          
-          
+            </article>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© 2026 Coca Diez · Visual Product Designer</p>
       </div>
-    </section>
+    </footer>
 
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© 2026 Coca Diez · Visual Product Designer</p>
-    </div>
-  </footer>
-
-  <script>
-    const nav = document.getElementById("nav");
-    window.addEventListener(
-      "scroll",
-      () => nav.classList.toggle("custom-nav--scrolled", window.scrollY > 40),
-      { passive: true },
-    );
-
-    function navSmooth(e, href) {
-      e.preventDefault();
-      document
-        .querySelector(href)
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    const hamburger = document.getElementById("hamburger");
-    const mobileMenu = document.getElementById("mobile-menu");
-    hamburger.addEventListener("click", () => {
-      const open = hamburger.getAttribute("aria-expanded") === "true";
-      hamburger.setAttribute("aria-expanded", String(!open));
-      hamburger.setAttribute(
-        "aria-label",
-        open ? "Abrir menú" : "Cerrar menú",
+    <script>
+      const nav = document.getElementById("nav");
+      window.addEventListener(
+        "scroll",
+        () => nav.classList.toggle("custom-nav--scrolled", window.scrollY > 40),
+        { passive: true },
       );
-      mobileMenu.setAttribute("aria-hidden", String(open));
-      mobileMenu.classList.toggle("custom-nav__mobile--open", !open);
-      hamburger.classList.toggle("custom-nav__hamburger--open", !open);
-    });
 
-    function mobileNav(e, href) {
-      e.preventDefault();
-      hamburger.setAttribute("aria-expanded", "false");
-      hamburger.setAttribute("aria-label", "Abrir menú");
-      mobileMenu.setAttribute("aria-hidden", "true");
-      mobileMenu.classList.remove("custom-nav__mobile--open");
-      hamburger.classList.remove("custom-nav__hamburger--open");
-      document
-        .querySelector(href)
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    function toggleProject(el) {
-      const isOpen = el.getAttribute("aria-expanded") === "true";
-      el.setAttribute("aria-expanded", String(!isOpen));
-      el.classList.toggle("project--open", !isOpen);
-    }
-    function projectKey(e, el) {
-      if (e.key === "Enter" || e.key === " ") {
+      function navSmooth(e, href) {
         e.preventDefault();
-        toggleProject(el);
-      }
-    }
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((en) => {
-          if (en.isIntersecting) {
-            setTimeout(
-              () => en.target.classList.add("fade-in--visible"),
-              Number(en.target.dataset.delay || 0),
-            );
-            io.unobserve(en.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: "0px 0px -50px 0px" },
-    );
-    document.querySelectorAll(".fade-in").forEach((el) => io.observe(el));
-
-    const dot = document.querySelector(".hero__scroll-dot");
-    let t = 0;
-    (function tick() {
-      t += 0.02;
-      if (dot) dot.style.transform = `translateY(${Math.sin(t) * 6}px)`;
-      requestAnimationFrame(tick);
-    })();
-
-    // ========== FORMULARIO DE CONTACTO ==========
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
-      const alertBox = document.getElementById("formAlert");
-      const button = form?.querySelector("button[type='submit']");
-
-      if (!form) {
-        console.error("Formulario no encontrado");
-        return;
+        document
+          .querySelector(href)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
-      const inputs = form.querySelectorAll(".form-control");
-      inputs.forEach((input) => {
-        input.addEventListener("blur", function () {
-          if (this.value.trim()) {
-            this.classList.remove("is-invalid");
-            this.classList.add("is-valid");
-          } else {
-            this.classList.remove("is-valid");
-          }
-        });
-
-        input.addEventListener("input", function () {
-          if (this.value.trim()) {
-            this.classList.remove("is-invalid");
-            this.classList.add("is-valid");
-          }
-        });
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+      hamburger.addEventListener("click", () => {
+        const open = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", String(!open));
+        hamburger.setAttribute(
+          "aria-label",
+          open ? "Abrir menú" : "Cerrar menú",
+        );
+        mobileMenu.setAttribute("aria-hidden", String(open));
+        mobileMenu.classList.toggle("custom-nav__mobile--open", !open);
+        hamburger.classList.toggle("custom-nav__hamburger--open", !open);
       });
 
-      form.addEventListener("submit", async function (event) {
-        event.preventDefault();
+      function mobileNav(e, href) {
+        e.preventDefault();
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.setAttribute("aria-label", "Abrir menú");
+        mobileMenu.setAttribute("aria-hidden", "true");
+        mobileMenu.classList.remove("custom-nav__mobile--open");
+        hamburger.classList.remove("custom-nav__hamburger--open");
+        document
+          .querySelector(href)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
 
-        const nombre = form.querySelector("#nombre");
-        const email = form.querySelector("#email");
-        const mensaje = form.querySelector("#mensaje");
-
-        let isValid = true;
-
-        [nombre, email, mensaje].forEach((el) => {
-          el.classList.remove("is-valid", "is-invalid");
-        });
-
-        if (!nombre.value.trim()) {
-          nombre.classList.add("is-invalid");
-          isValid = false;
-        } else {
-          nombre.classList.add("is-valid");
+      function toggleProject(el) {
+        const isOpen = el.getAttribute("aria-expanded") === "true";
+        el.setAttribute("aria-expanded", String(!isOpen));
+        el.classList.toggle("project--open", !isOpen);
+      }
+      function projectKey(e, el) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleProject(el);
         }
+      }
 
-        if (!email.value.trim() || !email.value.includes("@")) {
-          email.classList.add("is-invalid");
-          isValid = false;
-        } else {
-          email.classList.add("is-valid");
-        }
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) {
+              setTimeout(
+                () => en.target.classList.add("fade-in--visible"),
+                Number(en.target.dataset.delay || 0),
+              );
+              io.unobserve(en.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -50px 0px" },
+      );
+      document.querySelectorAll(".fade-in").forEach((el) => io.observe(el));
 
-        if (!mensaje.value.trim()) {
-          mensaje.classList.add("is-invalid");
-          isValid = false;
-        } else {
-          mensaje.classList.add("is-valid");
-        }
+      const dot = document.querySelector(".hero__scroll-dot");
+      let t = 0;
+      (function tick() {
+        t += 0.02;
+        if (dot) dot.style.transform = `translateY(${Math.sin(t) * 6}px)`;
+        requestAnimationFrame(tick);
+      })();
 
-        if (!isValid) {
-          alertBox.classList.remove("d-none");
-          alertBox.classList.add("alert-danger");
-          alertBox.innerText =
-            "Por favor completa todos los campos correctamente.";
+      // ========== FORMULARIO DE CONTACTO ==========
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
+        const alertBox = document.getElementById("formAlert");
+        const button = form?.querySelector("button[type='submit']");
+
+        if (!form) {
+          console.error("Formulario no encontrado");
           return;
         }
 
-        button.innerText = "Enviando...";
-        button.disabled = true;
-        alertBox.classList.add("d-none");
-
-        const data = new FormData(form);
-
-        try {
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: data,
-            headers: {
-              Accept: "application/json",
-            },
+        const inputs = form.querySelectorAll(".form-control");
+        inputs.forEach((input) => {
+          input.addEventListener("blur", function () {
+            if (this.value.trim()) {
+              this.classList.remove("is-invalid");
+              this.classList.add("is-valid");
+            } else {
+              this.classList.remove("is-valid");
+            }
           });
 
-          if (response.ok) {
-            alertBox.classList.remove("d-none", "alert-danger");
-            alertBox.classList.add("alert-success");
-            alertBox.innerText =
-              "¡Mensaje enviado correctamente! Te responderé lo antes posible.";
-            form.reset();
-            form.querySelectorAll(".form-control").forEach((el) => {
-              el.classList.remove("is-valid", "is-invalid");
-            });
+          input.addEventListener("input", function () {
+            if (this.value.trim()) {
+              this.classList.remove("is-invalid");
+              this.classList.add("is-valid");
+            }
+          });
+        });
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const nombre = form.querySelector("#nombre");
+          const email = form.querySelector("#email");
+          const mensaje = form.querySelector("#mensaje");
+
+          let isValid = true;
+
+          [nombre, email, mensaje].forEach((el) => {
+            el.classList.remove("is-valid", "is-invalid");
+          });
+
+          if (!nombre.value.trim()) {
+            nombre.classList.add("is-invalid");
+            isValid = false;
           } else {
-            throw new Error();
+            nombre.classList.add("is-valid");
           }
-        } catch (error) {
-          alertBox.classList.remove("d-none", "alert-success");
-          alertBox.classList.add("alert-danger");
-          alertBox.innerText = "Error al enviar. Intenta nuevamente.";
+
+          if (!email.value.trim() || !email.value.includes("@")) {
+            email.classList.add("is-invalid");
+            isValid = false;
+          } else {
+            email.classList.add("is-valid");
+          }
+
+          if (!mensaje.value.trim()) {
+            mensaje.classList.add("is-invalid");
+            isValid = false;
+          } else {
+            mensaje.classList.add("is-valid");
+          }
+
+          if (!isValid) {
+            alertBox.classList.remove("d-none");
+            alertBox.classList.add("alert-danger");
+            alertBox.innerText =
+              "Por favor completa todos los campos correctamente.";
+            return;
+          }
+
+          button.innerText = "Enviando...";
+          button.disabled = true;
+          alertBox.classList.add("d-none");
+
+          const data = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: data,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              alertBox.classList.remove("d-none", "alert-danger");
+              alertBox.classList.add("alert-success");
+              alertBox.innerText =
+                "¡Mensaje enviado correctamente! Te responderé lo antes posible.";
+              form.reset();
+              form.querySelectorAll(".form-control").forEach((el) => {
+                el.classList.remove("is-valid", "is-invalid");
+              });
+            } else {
+              throw new Error();
+            }
+          } catch (error) {
+            alertBox.classList.remove("d-none", "alert-success");
+            alertBox.classList.add("alert-danger");
+            alertBox.innerText = "Error al enviar. Intenta nuevamente.";
+          }
+
+          button.innerText = "Enviar Mensaje";
+          button.disabled = false;
+        });
+      });
+      function changeTab(event, tabId) {
+        // 1. Evitar que el clic abra/cierre la tarjeta del proyecto
+        event.stopPropagation();
+        event.preventDefault();
+
+        const tabsContainer = event.currentTarget.closest(".project__tabs");
+        if (!tabsContainer) return;
+
+        // 2. Desactivar todos los botones de pestaña
+        const buttons = tabsContainer.querySelectorAll(".nav-link");
+        buttons.forEach((btn) => {
+          btn.classList.remove("active");
+          btn.setAttribute("aria-selected", "false");
+        });
+
+        // 3. Ocultar todos los paneles de contenido
+        const panes = tabsContainer.querySelectorAll(".tab-pane");
+        panes.forEach((pane) => {
+          pane.classList.remove("show", "active");
+        });
+
+        // 4. Activar el botón seleccionado y mostrar su panel correspondiente
+        event.currentTarget.classList.add("active");
+        event.currentTarget.setAttribute("aria-selected", "true");
+
+        const targetPane = tabsContainer.querySelector("#" + tabId);
+        if (targetPane) {
+          targetPane.classList.add("show", "active");
         }
-
-        button.innerText = "Enviar Mensaje";
-        button.disabled = false;
-      });
-    });
-    function changeTab(event, tabId) {
-      // 1. Evitar que el clic abra/cierre la tarjeta del proyecto
-      event.stopPropagation();
-      event.preventDefault();
-
-      const tabsContainer = event.currentTarget.closest('.project__tabs');
-      if (!tabsContainer) return;
-
-      // 2. Desactivar todos los botones de pestaña
-      const buttons = tabsContainer.querySelectorAll('.nav-link');
-      buttons.forEach(btn => {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-selected', 'false');
-      });
-
-      // 3. Ocultar todos los paneles de contenido
-      const panes = tabsContainer.querySelectorAll('.tab-pane');
-      panes.forEach(pane => {
-        pane.classList.remove('show', 'active');
-      });
-
-      // 4. Activar el botón seleccionado y mostrar su panel correspondiente
-      event.currentTarget.classList.add('active');
-      event.currentTarget.setAttribute('aria-selected', 'true');
-
-      const targetPane = tabsContainer.querySelector('#' + tabId);
-      if (targetPane) {
-        targetPane.classList.add('show', 'active');
       }
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

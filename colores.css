@@ -1,0 +1,320 @@
+{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Ubuntu Sans', sans-serif;
+      color: #1A0A2E;
+      background-color: #FFFFFF; /* Fondo blanco limpio sin bordes ni contenedor gris */
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Barra Superior de Colores (Full Width / Se adapta al ancho total de la pantalla) */
+    .top-color-bar {
+      width: 100%;
+      height: 12px;
+      display: flex;
+    }
+    .bar-1 { background-color: #E6531D; flex: 1; }
+    .bar-2 { background-color: #402563; flex: 1; }
+    .bar-3 { background-color: #625EBF; flex: 1; }
+    .bar-4 { background-color: #C8B2E8; flex: 1; }
+    .bar-5 { background-color: #FFFFFF; flex: 1; border-bottom: 1px solid #E2E8F0; }
+    .bar-6 { background-color: #2C1F42; flex: 1; }
+    .bar-7 { background-color: #1A0A2E; flex: 1; }
+
+    /* Contenedor Principal de Contenido */
+    .main-container {
+      width: 100%;
+      max-width: 900px; /* Ancho cómodo de lectura mantenido */
+      margin: 0 auto;
+      padding: 32px 20px 40px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    /* Encabezado */
+    header {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #EDF2F7;
+      padding-bottom: 16px;
+    }
+    .report-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1A0A2E;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+    .report-subtitle {
+      font-size: 16px;
+      font-weight: 500;
+      color: #625EBF;
+    }
+
+    /* Cajas e Introducción */
+    .info-box {
+      background-color: #F8FAFC;
+      border-left: 4px solid #625EBF;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #2D3748;
+    }
+
+    .main-section-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #1A0A2E;
+      margin: 36px 0 18px 0;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 6px;
+    }
+
+    /* Grillas de Colores (Desktop / Por defecto) */
+    .color-grid-row-1 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .color-grid-row-2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .color-card {
+      background: #FAFAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swatch {
+      height: 40px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    .color-hex {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1A0A2E;
+      margin-bottom: 6px;
+      border-bottom: 1px solid #EDF2F7;
+      padding-bottom: 4px;
+    }
+    .tech-spec {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #4A5568;
+    }
+    .tech-spec strong {
+      color: #402563;
+    }
+
+    .typography-box {
+      margin-top: 20px;
+      background: #F1F5F9;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* Componentes de UI */
+    .ui-components-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .ui-card {
+      background: #FAFAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .ui-card-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #402563;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      text-decoration: none;
+    }
+    .btn-primary { background: #E6531D; color: #FFF; }
+    .btn-secondary { background: #625EBF; color: #FFF; }
+    .btn-outline { border: 1px solid #402563; color: #402563; }
+    .btn-ghost { color: #2C1F42; }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 500;
+      margin: 2px;
+    }
+    .badge-1 { background: #E6531D; color: #FFF; }
+    .badge-2 { background: #402563; color: #FFF; }
+    .badge-3 { background: #625EBF; color: #FFF; }
+    .badge-4 { background: #C8B2E8; color: #1A0A2E; }
+    .badge-5 { background: #2C1F42; color: #FFF; }
+
+    .alert {
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    .alert-success { background: #E6F4EA; color: #137333; }
+    .alert-warning { background: #FEF7E0; color: #B06000; }
+    .alert-error { background: #FCE8E6; color: #C5221F; }
+
+    /* Ratios y Accesibilidad */
+    .access-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .access-card {
+      background: #FAFAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .badge-pass {
+      display: inline-block;
+      background: #E6F4EA;
+      color: #137333;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* Armonía y Estética */
+    .harmony-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 16px;
+    }
+    .score-box {
+      background: #402563;
+      color: #FFFFFF;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .score-val {
+      font-size: 38px;
+      font-weight: 700;
+      color: #C8B2E8;
+    }
+    .checks-list {
+      background: #FAFAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 18px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* Psicología del Color */
+    .psych-block {
+      margin-bottom: 6px;
+    }
+    .psych-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #402563;
+      margin-bottom: 1px;
+    }
+    .psych-text {
+      font-size: 12.5px;
+      line-height: 1.4;
+      color: #2D3748;
+    }
+    .pros-cons {
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed #E2E8F0;
+    }
+    .pro { color: #157A3A; }
+    .con { color: #C02B2B; }
+    .brands-block {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #4A5568;
+    }
+
+   
+
+    /* ==========================================
+       MEDIA QUERIES PARA ADAPTACIÓN RESPONSIVA
+       ========================================== */
+
+    /* Tablet (máximo 768px) */
+    @media (max-width: 768px) {
+      .main-container {
+        padding: 24px 16px 32px 16px;
+      }
+      .report-title {
+        font-size: 22px;
+      }
+      .color-grid-row-1,
+      .color-grid-row-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .harmony-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Móvil (máximo 480px) */
+    @media (max-width: 480px) {
+      .report-title {
+        font-size: 20px;
+      }
+      .report-subtitle {
+        font-size: 14px;
+      }
+      .color-grid-row-1,
+      .color-grid-row-2,
+      .ui-components-grid,
+      .access-grid {
+        grid-template-columns: 1fr; /* Una sola columna fluida */
+      }
+      footer {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+      }
+    }

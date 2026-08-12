@@ -118,7 +118,7 @@ button { font-family: inherit; }
 }
 
 .custom-nav__logo {
-  font-family: var(--serif); font-size: 1.15rem; font-weight: 700; letter-spacing: -.02em;
+  font-family: var(--serif); font-size: 2.15rem; font-weight: 700; letter-spacing: -.02em;
   color: var(--lavender-hi); transition: color .3s;
 }
 .custom-nav--scrolled .custom-nav__logo { color: var(--purple); }

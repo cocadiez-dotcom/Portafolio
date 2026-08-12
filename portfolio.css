@@ -223,7 +223,7 @@ button { font-family: inherit; }
 }
 
 .hero__bottom {
-  display: flex; flex-direction: column; gap: 1.5rem;
+  display: flex; flex-direction: column; gap: 2.5rem;
   animation: heroFade .75s .42s ease both;
 }
 @media (min-width: 640px) {
@@ -339,12 +339,12 @@ button { font-family: inherit; }
   margin-top: 0;
 }
 
-.methods { display: flex; flex-wrap: wrap; gap: .5rem; padding-top: 1rem; }
+.methods { display: flex; flex-wrap: wrap; gap: .5rem; padding-top: 1rem; padding-left: 0;}
 .method {
   font-family: var(--mono); font-size: .7rem;
-  background: rgba(255,255,255,.1); color: var(--lavender-hi);
+  background: rgba(140, 12, 149, 0.2); color: #fff; font-weight: 500;
   padding: 4px 10px; border-radius: 999px;
-  border: 1px solid rgba(237,226,255,.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* ── SKILLS ────────────────────────────────────────────────────────────────── */

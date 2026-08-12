@@ -28,6 +28,7 @@
             return false;
           " aria-label="Volver al inicio">CD</a>
       <ul class="custom-nav__links">
+        
         <li>
           <a href="#about" class="custom-nav__link" onclick="navSmooth(event, '#about')">Sobre mí</a>
         </li>
@@ -40,6 +41,20 @@
         <li>
           <a href="#contact" class="custom-nav__link" onclick="navSmooth(event, '#contact')">Contacto</a>
         </li>
+        <li>
+          <a href="#" 
+   class="custom-nav__link custom-nav__translate-btn notranslate" translate="no" 
+   onclick="toggleTranslate(event)" 
+   id="translateBtn"
+   aria-label="Traducir al inglés"
+   lang="es">
+  <span class="text-es">English</span>
+  <span class="text-en" style="display: none;">Español</span>
+  <svg class="translate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+  </svg>
+</a>
+        </li>
       </ul>
       <a href="#contact" class="btn btn--solid custom-nav__cta" onclick="navSmooth(event, '#contact')">Trabajemos
         juntos</a>
@@ -50,6 +65,7 @@
     </nav>
     <div class="custom-nav__mobile" id="mobile-menu" hidden>
       <ul>
+        
         <li>
           <a href="#about" onclick="mobileNav(event, '#about')">Sobre mí</a>
         </li>
@@ -61,6 +77,20 @@
         </li>
         <li>
           <a href="#contact" onclick="mobileNav(event, '#contact')">Contacto</a>
+        </li>
+        <li>
+          <a href="#" 
+   class="custom-nav__translate-btn--mobilenotranslate" 
+   translate="no" 
+   onclick="toggleTranslate(event)" 
+   aria-label="Traducir al inglés"
+   lang="es">
+  <span class="text-es">English</span>
+  <span class="text-en" style="display: none;">Español</span>
+  <svg class="translate-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+  </svg>
+</a>
         </li>
       </ul>
       <button class="btn btn--solid" onclick="mobileNav(event, '#contact')">
@@ -98,7 +128,7 @@
 
         <dl class="hero__stats" aria-label="Estadísticas">
           <div>
-            <dt class="hero__stat-num">10+</dt>
+            <dt class="hero__stat-num notranslate" translate="no">10+</dt>
             <dd class="hero__stat-label">Años de experiencia</dd>
           </div>
           <div>
@@ -106,7 +136,7 @@
             <dd class="hero__stat-label">Inglés</dd>
           </div>
           <div>
-            <dt class="hero__stat-num">AA</dt>
+            <dt class="hero__stat-num notranslate" translate="no">AA</dt>
             <dd class="hero__stat-label">WCAG · Accesibilidad</dd>
           </div>
         </dl>
@@ -208,7 +238,7 @@
                 <div class="project__details">
                   <p class="body-text body-text--light">
                     <strong>Contexto y Desafío</strong>
-                    Good Food S.A. con su marca de alimentos Gourmet, comenzaba su presencia digital en 2000 con un sitio web. El desafío fue acompañar su crecimiento y evolución tecnológica durante 15 años, adaptándose a nuevas tendencias y necesidades del negocio.
+                    Good Food S.A. con su marca de alimentos "Gourmet", comenzaba su presencia digital en 2000 con un sitio web. El desafío fue acompañar su crecimiento y evolución tecnológica durante 15 años, adaptándose a nuevas tendencias y necesidades del negocio.
                   </p>
                   <p class="body-text body-text--light">
                     <strong>Rol y Responsabilidades</strong>
@@ -1025,7 +1055,8 @@
         button.disabled = true;
         alertBox.classList.add("d-none");
 
-        // Solución: Convertir Form Data a Objeto JSON para FormSubmit
+        // **********Solución: Convertir Form Data a Objeto JSON para FormSubmit******
+        
         const formDataObject = Object.fromEntries(new FormData(form));
 
         try {
@@ -1060,7 +1091,69 @@
         button.disabled = false;
       });
     });
-  </script>
+</script>
+
+<!-- Elemento oculto de Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  let currentLang = 'es';
+
+  // Inicialización de Google Translate
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'en,es',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  // Función principal unificada
+  function toggleTranslate(e) {
+    if (e) e.preventDefault();
+    
+    // 1. Busca el selector desplegable generado por Google Translate
+    const select = document.querySelector('.goog-te-combo');
+    
+    if (select) {
+      // Determina el nuevo idioma según el estado actual de Google Translate
+      const nuevoIdioma = (select.value === 'en') ? 'es' : 'en';
+      
+      // Cambia el idioma en Google Translate y dispara el evento
+      select.value = nuevoIdioma;
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+
+      // 2. Actualiza visualmente TODOS los botones de traducción (escritorio y móvil)
+      const buttons = document.querySelectorAll('.custom-nav__translate-btn, .custom-nav__translate-btn--mobile');
+      
+      buttons.forEach(btn => {
+        const textEs = btn.querySelector('.text-es');
+        const textEn = btn.querySelector('.text-en');
+
+        if (nuevoIdioma === 'en') {
+          // La página ahora está en INGLÉS: el botón muestra "Translate" y ofrece volver a español
+          if (textEs) textEs.style.display = 'none';
+          if (textEn) textEn.style.display = 'inline';
+          btn.setAttribute('aria-label', 'Switch to Spanish');
+          btn.setAttribute('lang', 'en');
+        } else {
+          // La página ahora está en ESPAÑOL: el botón muestra "Traducir" y ofrece cambiar a inglés
+          if (textEs) textEs.style.display = 'inline';
+          if (textEn) textEn.style.display = 'none';
+          btn.setAttribute('aria-label', 'Traducir al inglés');
+          btn.setAttribute('lang', 'es');
+        }
+      });
+
+    } else {
+      // Si el widget de Google aún no ha terminado de cargar en el primer clic, reintenta en 200ms
+      setTimeout(() => toggleTranslate(null), 200);
+    }
+  }
+</script>
+
+<!-- Carga del script oficial de Google Translate -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

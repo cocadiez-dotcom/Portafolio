@@ -609,3 +609,67 @@ button { font-family: inherit; }
   align-content: start; /* Que las filas de fotos no se repartan verticalmente */
 }
 
+/* ── Botón Traducir en Menú Nav ───────────────────────────────────────── */
+.custom-nav__translate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+
+.translate-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.custom-nav__translate-btn--mobile {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* -----Ocultar marcos/barras flotantes de Google Translate----- */
+.goog-te-banner-frame, 
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-te-spinner-pos {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+/* Ocultar barra superior fija y frames de Google Translate */
+.goog-te-banner-frame,
+.skiptranslate,
+iframe.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Evitar que Google añada margen superior al body */
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+/* Ocultar resaltados de texto al traducir */
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+  /* Por defecto, si el sitio está en español, ocultamos el inglés */
+html[lang="es"] .text-en {
+  display: none;
+}
+
+/* Si el sitio cambia a inglés, ocultamos el español */
+html[lang="en"] .text-es {
+  display: none;
+}
+}

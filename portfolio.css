@@ -663,6 +663,7 @@ body {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
   /* Por defecto, si el sitio está en español, ocultamos el inglés */
 html[lang="es"] .text-en {
   display: none;
@@ -672,4 +673,4 @@ html[lang="es"] .text-en {
 html[lang="en"] .text-es {
   display: none;
 }
-}
+

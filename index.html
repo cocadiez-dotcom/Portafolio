@@ -60,9 +60,9 @@
           <a href="#contact" data-scroll-link data-close-mobile>Contacto</a>
         </li>
       </ul>
-      <a href="#contact" class="btn btn--solid" data-scroll-link data-close-mobile>
+      <button type="button" class="btn btn--solid" data-scroll-link data-scroll-href="#contact" data-close-mobile>
         Trabajemos juntos
-      </a>
+      </button>
     </div>
   </header>
 
@@ -81,7 +81,7 @@
         </h1>
         <div class="hero__bottom">
           <p class="hero__bio">
-            Combino mi experiencia en publicidad con la atención al detalle de
+            Como diseñadora UX/UI, combino mi experiencia en publicidad con la atención al detalle de
             un diseñador visual para crear interfaces digitales atractivas y usables. Mediante el pensamiento de
             diseño y la empatía con el usuario, transformo arquitecturas de
             información complejas en interfaces digitales intuitivas, accesibles y con sistemas de diseño coherentes
@@ -921,7 +921,7 @@
       if (link) {
         event.preventDefault();
         if (link.hasAttribute("data-close-mobile")) closeMobileMenu();
-        smoothScrollTo(link.getAttribute("href"));
+        smoothScrollTo(link.getAttribute("data-scroll-href") || link.getAttribute("href"));
       }
     });
 

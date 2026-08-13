@@ -171,7 +171,7 @@ button { font-family: inherit; }
 
 /* móvil menu */
 .custom-nav__mobile {
-  background: rgba(248,247,252,.98);
+  background: rgba(248,247,252,.70);
   backdrop-filter: blur(14px);
   max-height: 0; overflow: hidden;
   transition: max-height .3s ease;

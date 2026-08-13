@@ -508,6 +508,7 @@ button { font-family: inherit; }
     cursor: not-allowed;
 }
 
+
 /* ── Scrollbar ─────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -537,18 +538,17 @@ button { font-family: inherit; }
   animation: floatGlow 4s ease-in-out infinite;
   display: inline-block; 
 }
-
 /* ── Galería de imágenes en acordeón ── */
 .project__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
   margin-top: 1rem;
-  align-items: start;
+  align-items: start; /* Importante: alinea las imágenes al inicio */
 }
 
 .project__gallery-img-wrapper {
-  display: block;
+  display: block; /* Cambiado de relative a block */
   width: 90%;
   overflow: hidden;
   border-radius: var(--radius-sm);
@@ -556,6 +556,7 @@ button { font-family: inherit; }
   transition: border-color 0.2s, transform 0.2s;
   background: transparent;
   line-height: 0;
+  /* Importante que el wrapper se ajuste al contenido */
   height: auto !important;
 }
 
@@ -571,6 +572,7 @@ button { font-family: inherit; }
   border-radius: calc(var(--radius-sm) - 1px);
 }
 
+/* Para pantallas pequeñas */
 @media (max-width: 639px) {
   .project__gallery {
     grid-template-columns: 1fr 1fr;
@@ -591,63 +593,19 @@ button { font-family: inherit; }
     gap: 1rem;
   }
 }
-
 .project__body-inner {
   overflow: hidden;
   display: grid;
   gap: 1.5rem;
   padding: 0 1.25rem;
-  align-items: start;
+  align-items: start; /* Que la galería no se estire para igualar el texto */
 }
-
 .project__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
   margin-top: 1rem;
   align-items: start;
-  align-content: start;
+  align-content: start; /* Que las filas de fotos no se repartan verticalmente */
 }
 
-/* ── Botón Traducir en Menú Nav ───────────────────────────────────────── */
-.custom-nav__translate-btn,
-.custom-nav__translate-btn--mobile {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  cursor: pointer;
-}
-
-.translate-icon {
-  display: inline-block;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
-}
-
-.custom-nav__translate-btn:hover .translate-icon,
-.custom-nav__translate-btn--mobile:hover .translate-icon {
-  transform: scale(1.1);
-}
-
-/* Ocultar marcos flotantes de Google Translate */
-.goog-te-banner-frame,
-.goog-te-balloon-frame,
-#goog-gt-tt,
-.goog-te-spinner-pos,
-.skiptranslate,
-iframe.goog-te-banner-frame {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-/* Evitar que Google añada margen superior */
-body {
-  top: 0px !important;
-  position: static !important;
-}
-
-/* Ocultar resaltados de texto */
-.goog-text-highlight {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}

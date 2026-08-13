@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Coca Diez — Diseñadora especializada en visual design de interfaces para productos digitales." />
@@ -18,27 +19,29 @@
 
 <body>
   <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-  <div id="top"></div>
 
   <!-- NAV -->
   <header class="custom-nav" id="nav">
     <nav class="custom-nav__inner" aria-label="Navegación principal">
-      <a href="#top" class="custom-nav__logo" data-scroll-top aria-label="Volver al inicio">CD</a>
+      <a href="#" class="custom-nav__logo" onclick="
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return false;
+          " aria-label="Volver al inicio">CD</a>
       <ul class="custom-nav__links">
         <li>
-          <a href="#about" class="custom-nav__link" data-scroll-link>Sobre mí</a>
+          <a href="#about" class="custom-nav__link" onclick="navSmooth(event, '#about')">Sobre mí</a>
         </li>
         <li>
-          <a href="#projects" class="custom-nav__link" data-scroll-link>Proyectos</a>
+          <a href="#projects" class="custom-nav__link" onclick="navSmooth(event, '#projects')">Proyectos</a>
         </li>
         <li>
-          <a href="#skills" class="custom-nav__link" data-scroll-link>Habilidades</a>
+          <a href="#skills" class="custom-nav__link" onclick="navSmooth(event, '#skills')">Habilidades</a>
         </li>
         <li>
-          <a href="#contact" class="custom-nav__link" data-scroll-link>Contacto</a>
+          <a href="#contact" class="custom-nav__link" onclick="navSmooth(event, '#contact')">Contacto</a>
         </li>
       </ul>
-      <a href="#contact" class="btn btn--solid custom-nav__cta" data-scroll-link>Trabajemos
+      <a href="#contact" class="btn btn--solid custom-nav__cta" onclick="navSmooth(event, '#contact')">Trabajemos
         juntos</a>
       <button class="custom-nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false"
         aria-controls="mobile-menu">
@@ -48,21 +51,21 @@
     <div class="custom-nav__mobile" id="mobile-menu" hidden>
       <ul>
         <li>
-          <a href="#about" data-scroll-link data-close-mobile>Sobre mí</a>
+          <a href="#about" onclick="mobileNav(event, '#about')">Sobre mí</a>
         </li>
         <li>
-          <a href="#projects" data-scroll-link data-close-mobile>Proyectos</a>
+          <a href="#projects" onclick="mobileNav(event, '#projects')">Proyectos</a>
         </li>
         <li>
-          <a href="#skills" data-scroll-link data-close-mobile>Habilidades</a>
+          <a href="#skills" onclick="mobileNav(event, '#skills')">Habilidades</a>
         </li>
         <li>
-          <a href="#contact" data-scroll-link data-close-mobile>Contacto</a>
+          <a href="#contact" onclick="mobileNav(event, '#contact')">Contacto</a>
         </li>
       </ul>
-      <a href="#contact" class="btn btn--solid" data-scroll-link data-close-mobile>
+      <button class="btn btn--solid" onclick="mobileNav(event, '#contact')">
         Trabajemos juntos
-      </a>
+      </button>
     </div>
   </header>
 
@@ -140,7 +143,8 @@
         </h2>
         <div class="projects__list fade-in" data-delay="120">
           <!-- PROYECTO 1 -->
-          <article class="project" tabindex="0" aria-expanded="false" aria-label="Good Food — Caso. Expandir detalles" role="button">
+          <article class="project" tabindex="0" aria-expanded="false" aria-label="Good Food — Caso. Expandir detalles"
+            onclick="toggleProject(this)" onkeydown="projectKey(event, this)">
             <div class="project__header">
               <div class="project__meta">
                 <span class="project__num" aria-hidden="true">01</span>
@@ -238,7 +242,8 @@
 
           <!-- PROYECTO 2 -->
           <article class="project" tabindex="0" aria-expanded="false"
-            aria-label="Viña Concha y Toro — Caso. Expandir detalles" role="button">
+            aria-label="Viña Concha y Toro — Caso. Expandir detalles" onclick="toggleProject(this)"
+            onkeydown="projectKey(event, this)">
             <div class="project__header">
               <div class="project__meta">
                 <span class="project__num" aria-hidden="true">02</span>
@@ -332,7 +337,8 @@
           </article>
 
           <!-- PROYECTO 3 -->
-          <article class="project" tabindex="0" aria-expanded="false" aria-label="Otros Proyectos" role="button">
+          <article class="project" tabindex="0" aria-expanded="false" aria-label="Otros Proyectos"
+            onclick="toggleProject(this)" onkeydown="projectKey(event, this)">
             <div class="project__header">
               <div class="project__meta">
                 <span class="project__num" aria-hidden="true">03</span>
@@ -439,7 +445,8 @@
           </article>
 
           <!-- PROYECTO 4 -->
-          <article class="project" tabindex="0" aria-expanded="false" aria-label="Auloria — EdTech. Expandir detalles" role="button">
+          <article class="project" tabindex="0" aria-expanded="false" aria-label="Auloria — EdTech. Expandir detalles"
+            onclick="toggleProject(this)" onkeydown="projectKey(event, this)">
             <div class="project__header">
               <div class="project__meta">
                 <span class="project__num" aria-hidden="true">04</span>
@@ -516,7 +523,8 @@
 
           <!-- PROYECTO 5 -->
           <article class="project" tabindex="0" aria-expanded="false"
-            aria-label="Aula Digital — IA · Arquitectura. Expandir detalles" role="button">
+            aria-label="Aula Digital — IA · Arquitectura. Expandir detalles" onclick="toggleProject(this)"
+            onkeydown="projectKey(event, this)">
             <div class="project__header">
               <div class="project__meta">
                 <span class="project__num" aria-hidden="true">05</span>
@@ -612,7 +620,8 @@
 
           <!-- PROYECTO 6 -->
           <article class="project" tabindex="0" aria-expanded="false"
-            aria-label="Aula Digital Research — UX Research · Accesibilidad. Expandir detalles" role="button">
+            aria-label="Aula Digital Research — UX Research · Accesibilidad. Expandir detalles"
+            onclick="toggleProject(this)" onkeydown="projectKey(event, this)">
             <div class="project__header">
               <div class="project__meta">
                 <span class="project__num" aria-hidden="true">06</span>
@@ -792,28 +801,24 @@
           oportunidad? Escríbeme.
         </p>
         <div class="contact__grid">
-          <form class="contact-form fade-in" data-delay="100" id="contactForm" novalidate
-            action="https://formsubmit.co/cocadiez@gmail.com" method="POST">
-            <div class="contact-form__group">
-              <label for="nombre" class="etiqueta">Nombre *</label>
-              <input type="text" name="nombre" class="contact-form__input" id="nombre" placeholder="Tu nombre"
-                required aria-describedby="nombre-error" aria-invalid="false" />
-              <p class="contact-form__error" id="nombre-error">Ingresa tu nombre.</p>
+          <form class="contact__intro fade-in" data-delay="100" id="contactForm" action="https://formsubmit.co/cocadiez@gmail.com" method="POST">
+            <label for="nombre" class="etiqueta">Nombre *</label>
+            <div class="mb-3">
+              <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Tu nombre" required />
+              <div class="invalid-feedback">Ingresa tu nombre.</div>
             </div>
 
-            <div class="contact-form__group">
-              <label for="email" class="etiqueta">Email *</label>
-              <input type="email" name="email" class="contact-form__input" id="email"
-                placeholder="nombre@ejemplo.com" required aria-describedby="email-error" aria-invalid="false" />
-              <p class="contact-form__error" id="email-error">Ingresa un email válido.</p>
+            <label for="email" class="etiqueta">Email *</label>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required />
+              <div class="invalid-feedback">Ingresa un email válido.</div>
             </div>
 
-            <div class="contact-form__group">
-              <label for="mensaje" class="etiqueta">Mensaje *</label>
-              <textarea name="mensaje" class="contact-form__input contact-form__input--textarea"
-                placeholder="Escribe tu mensaje aquí..." id="mensaje" required aria-describedby="mensaje-error"
-                aria-invalid="false"></textarea>
-              <p class="contact-form__error" id="mensaje-error">Escribe un mensaje.</p>
+            <label for="mensaje" class="etiqueta">Mensaje *</label>
+            <div class="mb-3">
+              <textarea name="mensaje" class="form-control" placeholder="Escribe tu mensaje aquí..." id="mensaje"
+                style="height: 120px" required></textarea>
+              <div class="invalid-feedback">Escribe un mensaje.</div>
             </div>
 
             <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio" />
@@ -823,7 +828,7 @@
               Enviar Mensaje
             </button>
 
-            <div id="formAlert" class="form-alert form-alert--hidden" role="alert" aria-live="polite"></div>
+            <div id="formAlert" class="alert d-none mt-3" role="alert" aria-live="polite"></div>
           </form>
 
           <div class="contact__sidebar fade-in" data-delay="200">
@@ -836,7 +841,7 @@
               forma remota con equipos internacionales.
             </p>
             <div class="contact__avail">
-              <p class="label label--light contact__avail-label">
+              <p class="label label--light" style="margin-bottom: 0.5rem">
                 Disponibilidad
               </p>
               <div class="contact__avail-row">
@@ -866,7 +871,6 @@
   </footer>
 
   <script>
-    // ========== NAV: fondo al hacer scroll ==========
     const nav = document.getElementById("nav");
     window.addEventListener(
       "scroll",
@@ -874,8 +878,8 @@
       { passive: true },
     );
 
-    // ========== NAV: scroll suave (delegado, sin onclick inline) ==========
-    function smoothScrollTo(href) {
+    function navSmooth(e, href) {
+      e.preventDefault();
       document
         .querySelector(href)
         ?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -883,71 +887,44 @@
 
     const hamburger = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobile-menu");
+    hamburger.addEventListener("click", () => {
+      const open = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", String(!open));
+      hamburger.setAttribute(
+        "aria-label",
+        open ? "Abrir menú" : "Cerrar menú"
+      );
+      mobileMenu.setAttribute("aria-hidden", String(open));
+      mobileMenu.toggleAttribute("hidden", open);
+      mobileMenu.classList.toggle("custom-nav__mobile--open", !open);
+      hamburger.classList.toggle("custom-nav__hamburger--open", !open);
+    });
 
-    function closeMobileMenu() {
+    function mobileNav(e, href) {
+      e.preventDefault();
       hamburger.setAttribute("aria-expanded", "false");
       hamburger.setAttribute("aria-label", "Abrir menú");
       mobileMenu.setAttribute("aria-hidden", "true");
       mobileMenu.setAttribute("hidden", "");
       mobileMenu.classList.remove("custom-nav__mobile--open");
       hamburger.classList.remove("custom-nav__hamburger--open");
+      document
+        .querySelector(href)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    hamburger.addEventListener("click", () => {
-      const open = hamburger.getAttribute("aria-expanded") === "true";
-      if (open) {
-        closeMobileMenu();
-      } else {
-        hamburger.setAttribute("aria-expanded", "true");
-        hamburger.setAttribute("aria-label", "Cerrar menú");
-        mobileMenu.setAttribute("aria-hidden", "false");
-        mobileMenu.removeAttribute("hidden");
-        mobileMenu.classList.add("custom-nav__mobile--open");
-        hamburger.classList.add("custom-nav__hamburger--open");
-      }
-    });
-
-    // Un único listener delegado para todos los enlaces con scroll suave
-    // (logo, links de escritorio, links móviles y CTAs)
-    document.addEventListener("click", (event) => {
-      const topLink = event.target.closest("[data-scroll-top]");
-      if (topLink) {
-        event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        return;
-      }
-
-      const link = event.target.closest("[data-scroll-link]");
-      if (link) {
-        event.preventDefault();
-        if (link.hasAttribute("data-close-mobile")) closeMobileMenu();
-        smoothScrollTo(link.getAttribute("href"));
-      }
-    });
-
-    // ========== PROYECTOS: acordeón accesible (delegado) ==========
     function toggleProject(el) {
       const isOpen = el.getAttribute("aria-expanded") === "true";
       el.setAttribute("aria-expanded", String(!isOpen));
       el.classList.toggle("project--open", !isOpen);
     }
-
-    const projectsList = document.querySelector(".projects__list");
-    if (projectsList) {
-      projectsList.addEventListener("click", (event) => {
-        const project = event.target.closest(".project");
-        if (project) toggleProject(project);
-      });
-      projectsList.addEventListener("keydown", (event) => {
-        if (event.key !== "Enter" && event.key !== " ") return;
-        const project = event.target.closest(".project");
-        if (!project) return;
-        event.preventDefault();
-        toggleProject(project);
-      });
+    function projectKey(e, el) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleProject(el);
+      }
     }
 
-    // ========== Animaciones al hacer scroll ==========
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((en) => {
@@ -972,7 +949,7 @@
       requestAnimationFrame(tick);
     })();
 
-    // ========== FORMULARIO DE CONTACTO (sin dependencias de Bootstrap) ==========
+    // ========== FORMULARIO DE CONTACTO ==========
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("contactForm");
       const alertBox = document.getElementById("formAlert");
@@ -983,42 +960,24 @@
         return;
       }
 
-      const inputs = form.querySelectorAll(".contact-form__input");
-
-      function setFieldState(input, valid) {
-        input.classList.toggle("is-invalid", !valid);
-        input.classList.toggle("is-valid", valid);
-        input.setAttribute("aria-invalid", String(!valid));
-      }
-
-      function fieldIsValid(input) {
-        if (input.type === "email") {
-          return input.value.trim() !== "" && input.value.includes("@");
-        }
-        return input.value.trim() !== "";
-      }
-
+      const inputs = form.querySelectorAll(".form-control");
       inputs.forEach((input) => {
         input.addEventListener("blur", function () {
-          if (this.value.trim()) setFieldState(this, fieldIsValid(this));
-          else {
-            this.classList.remove("is-valid", "is-invalid");
-            this.setAttribute("aria-invalid", "false");
+          if (this.value.trim()) {
+            this.classList.remove("is-invalid");
+            this.classList.add("is-valid");
+          } else {
+            this.classList.remove("is-valid");
           }
         });
 
         input.addEventListener("input", function () {
-          if (this.classList.contains("is-invalid") && fieldIsValid(this)) {
-            setFieldState(this, true);
+          if (this.value.trim()) {
+            this.classList.remove("is-invalid");
+            this.classList.add("is-valid");
           }
         });
       });
-
-      function showAlert(message, type) {
-        alertBox.classList.remove("form-alert--hidden", "form-alert--success", "form-alert--danger");
-        alertBox.classList.add(`form-alert--${type}`);
-        alertBox.textContent = message;
-      }
 
       form.addEventListener("submit", async function (event) {
         event.preventDefault();
@@ -1028,22 +987,45 @@
         const mensaje = form.querySelector("#mensaje");
 
         let isValid = true;
+
         [nombre, email, mensaje].forEach((el) => {
-          const valid = fieldIsValid(el);
-          setFieldState(el, valid);
-          if (!valid) isValid = false;
+          el.classList.remove("is-valid", "is-invalid");
         });
 
+        if (!nombre.value.trim()) {
+          nombre.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          nombre.classList.add("is-valid");
+        }
+
+        if (!email.value.trim() || !email.value.includes("@")) {
+          email.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          email.classList.add("is-valid");
+        }
+
+        if (!mensaje.value.trim()) {
+          mensaje.classList.add("is-invalid");
+          isValid = false;
+        } else {
+          mensaje.classList.add("is-valid");
+        }
+
         if (!isValid) {
-          showAlert("Por favor completa todos los campos correctamente.", "danger");
+          alertBox.classList.remove("d-none");
+          alertBox.classList.add("alert-danger");
+          alertBox.innerText =
+            "Por favor completa todos los campos correctamente.";
           return;
         }
 
-        button.textContent = "Enviando...";
+        button.innerText = "Enviando...";
         button.disabled = true;
-        alertBox.classList.add("form-alert--hidden");
+        alertBox.classList.add("d-none");
 
-        // Convertir FormData a objeto JSON para FormSubmit
+        // Solución: Convertir Form Data a Objeto JSON para FormSubmit
         const formDataObject = Object.fromEntries(new FormData(form));
 
         try {
@@ -1057,20 +1039,24 @@
           });
 
           if (response.ok) {
-            showAlert("¡Mensaje enviado correctamente! Te responderé lo antes posible.", "success");
+            alertBox.classList.remove("d-none", "alert-danger");
+            alertBox.classList.add("alert-success");
+            alertBox.innerText =
+              "¡Mensaje enviado correctamente! Te responderé lo antes posible.";
             form.reset();
-            inputs.forEach((el) => {
+            form.querySelectorAll(".form-control").forEach((el) => {
               el.classList.remove("is-valid", "is-invalid");
-              el.setAttribute("aria-invalid", "false");
             });
           } else {
             throw new Error("Respuesta de red no ok");
           }
         } catch (error) {
-          showAlert("Error al enviar. Intenta nuevamente.", "danger");
+          alertBox.classList.remove("d-none", "alert-success");
+          alertBox.classList.add("alert-danger");
+          alertBox.innerText = "Error al enviar. Intenta nuevamente.";
         }
 
-        button.textContent = "Enviar Mensaje";
+        button.innerText = "Enviar Mensaje";
         button.disabled = false;
       });
     });

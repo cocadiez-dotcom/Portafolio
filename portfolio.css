@@ -12,7 +12,7 @@ ul { list-style: none; }
 a { text-decoration: none; }
 button { font-family: inherit; }
 
-/* ───────────────────────  tokens de diseño ─────────────────────────────────── */
+/* ──────────  tokens de diseño ────────────── */
 :root {
   --purple:      #402563;
   --purple-deep: #2D1657;
@@ -44,7 +44,7 @@ button { font-family: inherit; }
 @media (min-width: 640px)  { :root { --px: 1.5rem; } }
 @media (min-width: 1024px) { :root { --px: 2rem; } }
 
-/* ─────────────────────── Skip link ───────────────────────────────── */
+/* ------------ saltar al contenido principal ───────────────────────────────── */
 .skip-link {
   position: fixed; top: 1rem; left: 1rem; z-index: 200;
   padding: .5rem 1rem; border-radius: .5rem;
@@ -373,8 +373,9 @@ button { font-family: inherit; }
 }
 
 /* ── Galería de imágenes del proyecto ─────────────────────────────────────────
-   Ojo, cada imagen reserva su espacio con `aspect-ratio` no se necesitan las dimensiones
-   intrínsecas reales de cada foto: `object-fit: cover` evita la deformación.*/
+   La caja se ajusta al ancho de la columna; el alto se calcula solo según la
+   proporción real de cada imagen (sin aspect-ratio fijo ni object-fit: cover),
+   así la imagen se ve completa y sin recortar. */
 .project__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -390,12 +391,13 @@ button { font-family: inherit; }
 .project__gallery-img-wrapper {
   display: block;
   width: 100%;
-  aspect-ratio: var(--gallery-ratio);
   overflow: hidden;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(237, 226, 255, 0.1);
   transition: border-color 0.2s, transform 0.2s;
-  background: var(--purple-deep);
+  background: transparent;
+  line-height: 0;
+  height: auto !important;
 }
 .project__gallery-img-wrapper:hover {
   border-color: rgba(237, 226, 255, 0.4);
@@ -405,8 +407,7 @@ button { font-family: inherit; }
 .project__gallery-img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: calc(var(--radius-sm) - 1px);
 }
 
@@ -620,3 +621,55 @@ button { font-family: inherit; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .fade-in { opacity: 1; transform: none; }
 }
+/* ── Proyecto 00 en galería en 1 columna e imagen completa ────── */
+.project__body-inner.project__body-inner--doc {
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .project__body-inner.project__body-inner--doc {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.project__gallery.project__gallery--doc {
+  grid-template-columns: 1fr;
+}
+
+.project__gallery-img-wrapper.project__gallery-img-wrapper--doc {
+  aspect-ratio: auto;
+  background: transparent;
+}
+
+.project__gallery-img.project__gallery-img--doc {
+  height: auto;
+  object-fit: contain;
+}
+
+/* Grillas de Colores (Desktop / Por defecto) */
+    .color-grid-row-1 {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.1rem;
+    }
+   
+
+    .color-card {
+     margin-top: 1rem;
+      margin-bottom: 1rem;
+     padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .swatch {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 5rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid var(--purple-deep);
+    }
+     .color-hex {
+      font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 500;
+      color: var(--light-bg);
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.2rem;
+    }

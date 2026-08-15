@@ -12,7 +12,7 @@ ul { list-style: none; }
 a { text-decoration: none; }
 button { font-family: inherit; }
 
-/* ──────────  tokens de diseño ────────────── */
+/* ────────── tokens de diseño ────────────── */
 :root {
   --purple:      #402563;
   --purple-deep: #2D1657;
@@ -54,7 +54,7 @@ button { font-family: inherit; }
 }
 .skip-link:focus { transform: translateY(0); }
 
-/* ──────────────────────── Animación de Fade-in  ───────────────────────────────── */
+/* ──────────────────────── Animación de Fade-in ───────────────────────────────── */
 .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .fade-in--visible { opacity: 1; transform: translateY(0); }
 
@@ -230,7 +230,7 @@ button { font-family: inherit; }
   font-size: clamp(3.5rem, 15vw, 10.5rem);
   font-weight: 700; color: #fff;
   line-height: .88;
-  animation: floatGlow 4s ease-in-out infinite;
+  animation: floatGlow 10s ease-in-out infinite;
 }
 @keyframes floatGlow {
   0%, 100% {
@@ -262,7 +262,7 @@ button { font-family: inherit; }
 .hero__bio {
   font-family: var(--sans); color: var(--lavender-hi);
   font-size: clamp(.95rem, 2.5vw, 1.1rem); line-height: 1.65; font-weight: 400;
-  max-width: 37.5rem; /* corregido: antes "600" sin unidad (declaración inválida, se ignoraba) */
+  max-width: 60rem;
 }
 .hero__bio strong { font-weight: 600; color: #fff; }
 
@@ -301,27 +301,53 @@ button { font-family: inherit; }
 .projects__list { display: flex; flex-direction: column; gap: .75rem; }
 
 .project {
-  border-radius: var(--radius); overflow: hidden; cursor: pointer;
+  border-radius: var(--radius); overflow: hidden;
   background: rgba(255,255,255,.08);
   border: 1px solid rgba(237,226,255,.1);
   transition: border-color .2s;
-  outline: none;
 }
-.project:focus-visible { outline: 2px solid var(--lavender-hi); outline-offset: 2px; }
 .project--open { border-color: rgba(237,226,255,.28); }
 
 .project__header {
-  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  padding: 1.25rem;
+  margin: 0;
+  padding: 0;
 }
-@media (min-width: 768px) { .project__header { padding: 1.75rem; } }
+
+.project__title {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.project__trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
+  outline: none;
+}
+.project__trigger:focus-visible {
+  outline: 2px solid var(--lavender-hi);
+  outline-offset: -2px;
+}
+@media (min-width: 768px) { .project__trigger { padding: 1.75rem; } }
 
 .project__meta { display: flex; align-items: center; gap: 1rem; min-width: 0; }
 @media (min-width: 768px) { .project__meta { gap: 1.5rem; } }
 
+.project__text { display: flex; flex-direction: column; min-width: 0; }
 .project__num { font-family: var(--mono); color: var(--lavender-md); font-size: .72rem; flex-shrink: 0; }
 .project__tag { font-family: var(--mono); color: var(--lavender-md); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3px; }
-.project__title { font-family: var(--serif); color: #fff; font-size: clamp(1.1rem, 3.5vw, 1.65rem); font-weight: 700; line-height: 1.1; }
+.project__heading-text { font-family: var(--serif); color: #fff; font-size: clamp(1.1rem, 3.5vw, 1.65rem); font-weight: 700; line-height: 1.1; }
 
 .project__toggle {
   width: 2rem; height: 2rem; border-radius: 50%; flex-shrink: 0;
@@ -331,7 +357,7 @@ button { font-family: inherit; }
 }
 .project--open .project__toggle { transform: rotate(45deg); }
 
-/* -----Accordeon ---- */
+/* ----- Accordeon ----- */
 .project__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .32s ease; }
 .project--open .project__body { grid-template-rows: 1fr; }
 
@@ -339,7 +365,7 @@ button { font-family: inherit; }
   overflow: hidden;
   display: grid; gap: 1.5rem;
   padding: 0 1.25rem;
-  align-items: start; /* la galería no se estira para igualar la altura del texto */
+  align-items: start;
 }
 .project--open .project__body-inner { padding-bottom: 1.5rem; }
 @media (min-width: 768px) {
@@ -372,10 +398,7 @@ button { font-family: inherit; }
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* ── Galería de imágenes del proyecto ─────────────────────────────────────────
-   La caja se ajusta al ancho de la columna; el alto se calcula solo según la
-   proporción real de cada imagen (sin aspect-ratio fijo ni object-fit: cover),
-   así la imagen se ve completa y sin recortar. */
+/* ── Galería de imágenes del proyecto ───────────────────────────────────────── */
 .project__gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -390,7 +413,7 @@ button { font-family: inherit; }
 
 .project__gallery-img-wrapper {
   display: block;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(237, 226, 255, 0.1);
@@ -646,30 +669,29 @@ button { font-family: inherit; }
 }
 
 /* Grillas de Colores (Desktop / Por defecto) */
-    .color-grid-row-1 {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.1rem;
-    }
-   
+.color-grid-row-1 {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.1rem;
+}
 
-    .color-card {
-     margin-top: 1rem;
-      margin-bottom: 1rem;
-     padding-left: 1rem;
-      display: flex;
-      flex-direction: column;
-    }
-    .swatch {
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 5rem;
-      margin-bottom: 0.5rem;
-      border: 1px solid var(--purple-deep);
-    }
-     .color-hex {
-      font-family: var(--mono);
+.color-card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.swatch {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--purple-deep);
+}
+.color-hex {
+  font-family: var(--mono);
   font-size: .72rem;
   font-weight: 500;
-      color: var(--light-bg);
-      margin-bottom: 0.5rem;
-      padding-bottom: 0.2rem;
-    }
+  color: var(--light-bg);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.2rem;
+}

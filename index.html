@@ -13,7 +13,6 @@
     href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Ubuntu+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Ubuntu+Sans+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="portfolio.css" />
-  
 </head>
 
 <body>
@@ -140,24 +139,26 @@
         </h2>
         <div class="projects__list fade-in" data-delay="120">
           <!-- PROYECTO 1 -->
-          <article class="project" tabindex="0" aria-expanded="false" aria-label="Good Food — Caso. Expandir detalles" role="button">
+          <article class="project">
             <div class="project__header">
-              <div class="project__meta">
-                <span class="project__num" aria-hidden="true">01</span>
-                <div>
-                  <p class="project__tag">GOURMET (Good Food S.A.)</p>
-                  <h3 class="project__title">
-                    Evolución Digital de la Marca
-                  </h3>
-                </div>
-              </div>
-              <div class="project__toggle" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-              </div>
+              <h3 class="project__title">
+                <button type="button" class="project__trigger" aria-expanded="false" aria-controls="project-body-1" id="project-header-1">
+                  <span class="project__meta">
+                    <span class="project__num" aria-hidden="true">01</span>
+                    <span class="project__text">
+                      <span class="project__tag">GOURMET (Good Food S.A.)</span>
+                      <span class="project__heading-text">Evolución Digital de la Marca</span>
+                    </span>
+                  </span>
+                  <span class="project__toggle" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
             </div>
-            <div class="project__body">
+            <div class="project__body" id="project-body-1" role="region" aria-labelledby="project-header-1">
               <div class="project__body-inner">
                 <div class="project__gallery">
                   <div class="project__gallery-img-wrapper">
@@ -237,25 +238,26 @@
           </article>
 
           <!-- PROYECTO 2 -->
-          <article class="project" tabindex="0" aria-expanded="false"
-            aria-label="Viña Concha y Toro — Caso. Expandir detalles" role="button">
+          <article class="project">
             <div class="project__header">
-              <div class="project__meta">
-                <span class="project__num" aria-hidden="true">02</span>
-                <div>
-                  <p class="project__tag">Viña Concha y Toro</p>
-                  <h3 class="project__title">
-                    Rediseño Web Global, Escalabilidad y Ecosistema de Marcas
-                  </h3>
-                </div>
-              </div>
-              <div class="project__toggle" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-              </div>
+              <h3 class="project__title">
+                <button type="button" class="project__trigger" aria-expanded="false" aria-controls="project-body-2" id="project-header-2">
+                  <span class="project__meta">
+                    <span class="project__num" aria-hidden="true">02</span>
+                    <span class="project__text">
+                      <span class="project__tag">Viña Concha y Toro</span>
+                      <span class="project__heading-text">Rediseño Web Global, Escalabilidad y Ecosistema de Marcas</span>
+                    </span>
+                  </span>
+                  <span class="project__toggle" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
             </div>
-            <div class="project__body">
+            <div class="project__body" id="project-body-2" role="region" aria-labelledby="project-header-2">
               <div class="project__body-inner">
                 <div class="project__gallery">
                   <div class="project__gallery-img-wrapper">
@@ -332,24 +334,26 @@
           </article>
 
           <!-- PROYECTO 3 -->
-          <article class="project" tabindex="0" aria-expanded="false" aria-label="Otros Proyectos" role="button">
+          <article class="project">
             <div class="project__header">
-              <div class="project__meta">
-                <span class="project__num" aria-hidden="true">03</span>
-                <div>
-                  <p class="project__tag">Varios</p>
-                  <h3 class="project__title">
-                    Diseño para web, web apps y juegos.
-                  </h3>
-                </div>
-              </div>
-              <div class="project__toggle" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-              </div>
+              <h3 class="project__title">
+                <button type="button" class="project__trigger" aria-expanded="false" aria-controls="project-body-3" id="project-header-3">
+                  <span class="project__meta">
+                    <span class="project__num" aria-hidden="true">03</span>
+                    <span class="project__text">
+                      <span class="project__tag">Varios</span>
+                      <span class="project__heading-text">Diseño para web, web apps y juegos.</span>
+                    </span>
+                  </span>
+                  <span class="project__toggle" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
             </div>
-            <div class="project__body">
+            <div class="project__body" id="project-body-3" role="region" aria-labelledby="project-header-3">
               <div class="project__body-inner">
                 <div class="project__gallery">
                   <div class="project__gallery-img-wrapper">
@@ -439,22 +443,26 @@
           </article>
 
           <!-- PROYECTO 4 -->
-          <article class="project" tabindex="0" aria-expanded="false" aria-label="Auloria — EdTech. Expandir detalles" role="button">
+          <article class="project">
             <div class="project__header">
-              <div class="project__meta">
-                <span class="project__num" aria-hidden="true">04</span>
-                <div>
-                  <p class="project__tag">Auloria</p>
-                  <h3 class="project__title">Investigación UX y diseño de interfaz</h3>
-                </div>
-              </div>
-              <div class="project__toggle" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-              </div>
+              <h3 class="project__title">
+                <button type="button" class="project__trigger" aria-expanded="false" aria-controls="project-body-4" id="project-header-4">
+                  <span class="project__meta">
+                    <span class="project__num" aria-hidden="true">04</span>
+                    <span class="project__text">
+                      <span class="project__tag">Auloria</span>
+                      <span class="project__heading-text">Investigación UX y diseño de interfaz</span>
+                    </span>
+                  </span>
+                  <span class="project__toggle" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
             </div>
-            <div class="project__body">
+            <div class="project__body" id="project-body-4" role="region" aria-labelledby="project-header-4">
               <div class="project__body-inner">
                 <div class="project__gallery">
                   <div class="project__gallery-img-wrapper">
@@ -515,23 +523,26 @@
           </article>
 
           <!-- PROYECTO 5 -->
-          <article class="project" tabindex="0" aria-expanded="false"
-            aria-label="Aula Digital — IA · Arquitectura. Expandir detalles" role="button">
+          <article class="project">
             <div class="project__header">
-              <div class="project__meta">
-                <span class="project__num" aria-hidden="true">05</span>
-                <div>
-                  <p class="project__tag">Aula Digital</p>
-                  <h3 class="project__title">Investigación de Arquitectura de la Información</h3>
-                </div>
-              </div>
-              <div class="project__toggle" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-              </div>
+              <h3 class="project__title">
+                <button type="button" class="project__trigger" aria-expanded="false" aria-controls="project-body-5" id="project-header-5">
+                  <span class="project__meta">
+                    <span class="project__num" aria-hidden="true">05</span>
+                    <span class="project__text">
+                      <span class="project__tag">Aula Digital</span>
+                      <span class="project__heading-text">Investigación de Arquitectura de la Información</span>
+                    </span>
+                  </span>
+                  <span class="project__toggle" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
             </div>
-            <div class="project__body">
+            <div class="project__body" id="project-body-5" role="region" aria-labelledby="project-header-5">
               <div class="project__body-inner">
                 <div class="project__gallery">
                   <div class="project__gallery-img-wrapper">
@@ -611,23 +622,26 @@
           </article>
 
           <!-- PROYECTO 6 -->
-          <article class="project" tabindex="0" aria-expanded="false"
-            aria-label="Aula Digital Research — UX Research · Accesibilidad. Expandir detalles" role="button">
+          <article class="project">
             <div class="project__header">
-              <div class="project__meta">
-                <span class="project__num" aria-hidden="true">06</span>
-                <div>
-                  <p class="project__tag">Plataforma educativa</p>
-                  <h3 class="project__title">Investigación de Accesibilidad Cognitiva y Diseño Inclusivo</h3>
-                </div>
-              </div>
-              <div class="project__toggle" aria-hidden="true">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
-              </div>
+              <h3 class="project__title">
+                <button type="button" class="project__trigger" aria-expanded="false" aria-controls="project-body-6" id="project-header-6">
+                  <span class="project__meta">
+                    <span class="project__num" aria-hidden="true">06</span>
+                    <span class="project__text">
+                      <span class="project__tag">Plataforma educativa</span>
+                      <span class="project__heading-text">Investigación de Accesibilidad Cognitiva y Diseño Inclusivo</span>
+                    </span>
+                  </span>
+                  <span class="project__toggle" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
             </div>
-            <div class="project__body">
+            <div class="project__body" id="project-body-6" role="region" aria-labelledby="project-header-6">
               <div class="project__body-inner">
                 <div class="project__gallery">
                   <div class="project__gallery-img-wrapper">
@@ -926,24 +940,18 @@
     });
 
     // ========== PROYECTOS: acordeón accesible (delegado) ==========
-    function toggleProject(el) {
-      const isOpen = el.getAttribute("aria-expanded") === "true";
-      el.setAttribute("aria-expanded", String(!isOpen));
-      el.classList.toggle("project--open", !isOpen);
+    function toggleProject(triggerBtn) {
+      const project = triggerBtn.closest(".project");
+      const isOpen = triggerBtn.getAttribute("aria-expanded") === "true";
+      triggerBtn.setAttribute("aria-expanded", String(!isOpen));
+      project.classList.toggle("project--open", !isOpen);
     }
 
     const projectsList = document.querySelector(".projects__list");
     if (projectsList) {
       projectsList.addEventListener("click", (event) => {
-        const project = event.target.closest(".project");
-        if (project) toggleProject(project);
-      });
-      projectsList.addEventListener("keydown", (event) => {
-        if (event.key !== "Enter" && event.key !== " ") return;
-        const project = event.target.closest(".project");
-        if (!project) return;
-        event.preventDefault();
-        toggleProject(project);
+        const trigger = event.target.closest(".project__trigger");
+        if (trigger) toggleProject(trigger);
       });
     }
 
